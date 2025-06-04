@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoReflect - O Espelho Inteligente que Sabe o que Você Precisa!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="home.html" style="text-decoration: none; color: inherit;">NeoReflect</a></h1>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <a href="home.html" class="active">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="funcionalidades.html">Funcionalidades</a>
+            <a href="o-que-esperar.html">O que esperar</a>
+            <a href="tecnologia.html">Tecnologia</a>
+            <a href="como-comprar.html">Como Comprar</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>“O Espelho Inteligente que Sabe o que Você Precisa!”</h2>
+            <p>NeoReflect combina tecnologia de ponta e design elegante para transformar sua rotina de beleza e estilo com espelhos inteligentes que analisam, aconselham e inspiram, adaptando-se a você.</p>
+            <a href="produtos.html" class="btn">Descubra Nossos Produtos</a>
+        </section>
+
+        <section id="destaques">
+            <h2>Por que NeoReflect?</h2>
+            <div class="features-overview">
+                <div class="feature-item">
+                    <h3>Adaptação Inteligente</h3>
+                    <p>Nossos espelhos aprendem com você, adaptando-se ao seu corpo, etnia e estilo com base em pesquisas ergonômicas e dermatológicas.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Beleza Personalizada com IA</h3>
+                    <p>Receba análises de tom de pele, sugestões de maquiagem e looks completos, tudo personalizado pela nossa Inteligência Artificial.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Experiência Interativa</h3>
+                    <p>Use Realidade Aumentada para experimentar visuais e integre com assistentes virtuais para uma rotina conectada e divertida.</p>
+                </div>
+            </div>
+             <style>
+                .features-overview {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 25px;
+                    text-align: center;
+                    margin-top: 30px;
+                }
+                .feature-item {
+                    background-color: var(--card-background);
+                    padding: 25px;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 12px var(--shadow-color);
+                    display: flex;
+                    flex-direction: column;
+                }
+                .feature-item h3 {
+                    font-family: var(--font-secondary);
+                    color: var(--accent-color);
+                    font-size: 1.5em;
+                    margin-bottom: 10px;
+                }
+                 .feature-item p {
+                    flex-grow: 1; /* Faz o parágrafo ocupar o espaço */
+                 }
+            </style>
+        </section>
+
+        <section id="produtos-preview">
+            <h2>Conheça Nossos Produtos Estrela</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="https://placehold.co/400x300/f8e0e0/8d5b5b?text=Espelho+de+Mesa" alt="Espelho de Mesa Inteligente">
+                    <h3>Espelho de Mesa Inteligente</h3>
+                    <p>Praticidade e estilo com iluminação LED, sensor de proximidade e análise básica da pele. Design compacto em tons rosé e bege.</p>
+                    <p class="price-preview"><strong>R$ 399 - R$ 699</strong></p>
+                    <a href="produtos.html#espelho-mesa" class="btn product-btn">Saiba Mais</a>
+                </div>
+                <div class="product">
+                    <img src="https://placehold.co/400x300/fbeaea/b17c7c?text=Maquiagem+com+IA" alt="Espelho de Maquiagem com IA">
+                    <h3>Espelho de Maquiagem com IA</h3>
+                    <p>Seu assistente pessoal de beleza com câmera HD, análise de pele, recomendações de maquiagem e tela touch premium.</p>
+                     <p class="price-preview"><strong>R$ 799 - R$ 1.299</strong></p>
+                    <a href="produtos.html#espelho-maquiagem-ia" class="btn product-btn">Saiba Mais</a>
+                </div>
+                <div class="product">
+                    <img src="https://placehold.co/400x300/fdf7f5/5e4b4b?text=Corpo+Inteiro+IA" alt="Espelho de Corpo Inteiro Inteligente">
+                    <h3>Espelho de Corpo Inteiro Inteligente</h3>
+                    <p>Moda e tecnologia unidas com análise de postura, combinação de looks e recomendações de estilo personalizadas.</p>
+                     <p class="price-preview"><strong>R$ 1.490 - R$ 2.490</strong></p>
+                    <a href="produtos.html#espelho-corpo-inteiro" class="btn product-btn">Saiba Mais</a>
+                </div>
+            </div>
+             <style>
+                .product .price-preview { /* Estilo específico para preço na home */
+                    font-size: 1.1em;
+                    color: var(--primary-color);
+                    margin-top: 10px;
+                    font-weight: bold;
+                }
+                .product-btn {
+                    background-color: var(--accent-color);
+                    font-size: 0.9em;
+                    padding: 10px 20px;
+                    margin-top: 15px;
+                }
+                .product-btn:hover {
+                    background-color: var(--primary-color);
+                }
+            </style>
+        </section>
+        
+        <section id="call-to-action-home">
+            <h2>Seja a melhor versão de você!</h2>
+            <p>Com NeoReflect, descubra a sua verdadeira beleza todos os dias e compartilhe o que há de melhor em você com o mundo.</p>
+            <div class="hashtags-home">
+                <span>#NeoReflectBeauty</span>
+                <span>#BelezaInteligente</span>
+                <span>#TransformeSeuLook</span>
+            </div>
+             <a href="contato.html" class="btn">Entre em Contato</a>
+        </section>
+
+    </main>
+    
+    <style>
+        #call-to-action-home {
+            text-align: center;
+            background: linear-gradient(135deg, var(--secondary-color), #f8e0e0);
+            padding: 50px 30px;
+            border-radius: 20px;
+            margin: 40px auto;
+            box-shadow: 0 8px 25px var(--shadow-color);
+        }
+        #call-to-action-home h2 {
+            font-family: var(--font-secondary);
+            color: var(--accent-color);
+            font-size: 2.2em;
+        }
+        #call-to-action-home p {
+            font-size: 1.1em;
+            max-width: 600px;
+            margin: 15px auto 25px auto;
+        }
+        .hashtags-home {
+            margin-bottom: 30px;
+        }
+        .hashtags-home span {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9em;
+            transition: transform 0.2s ease;
+        }
+        .hashtags-home span:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+    <footer>
+        <p>© <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

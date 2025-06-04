@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoReflect - Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Poderia adicionar ícones para os canais de contato, ex: Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+</head>
+<body>
+    <header>
+        <h1><a href="home.html" style="text-decoration: none; color: inherit;">NeoReflect</a></h1>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="funcionalidades.html">Funcionalidades</a>
+            <a href="o-que-esperar.html">O que esperar</a>
+            <a href="tecnologia.html">Tecnologia</a>
+            <a href="como-comprar.html">Como Comprar</a>
+            <a href="contato.html" class="active">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contato">
+            <h2>Entre em Contato Connosco</h2>
+            <p class="intro-contato">Adoraríamos ouvir de si! Seja para tirar dúvidas, dar sugestões, registar interesse nos nossos produtos ou para parcerias, a equipa NeoReflect está à sua disposição.</p>
+            
+            <div class="contact-channels">
+                <div class="channel-card">
+                    <!-- <i class="fas fa-envelope"></i> Exemplo de ícone -->
+                    <h3>Email</h3>
+                    <p>Para questões gerais, suporte ou informações comerciais:</p>
+                    <a href="mailto:espelhos@inteligentes.com.br">espelhos@inteligentes.com.br</a>
+                </div>
+
+                <div class="channel-card">
+                    <!-- <i class="fab fa-whatsapp"></i> Exemplo de ícone -->
+                    <h3>WhatsApp</h3>
+                    <p>Para um contacto mais direto e rápido:</p>
+                    <a href="https://wa.me/55199995722896" target="_blank">(19) 9 99572-2896</a>
+                </div>
+
+                <div class="channel-card">
+                    <!-- <i class="fas fa-phone"></i> Exemplo de ícone -->
+                    <h3>Telefone</h3>
+                    <p>Para atendimento por voz:</p>
+                    <p class="phone-number">(19) 9 3652-9864</p>
+                </div>
+            </div>
+
+            <div class="contact-form-placeholder">
+                <h3>Ou Deixe-nos uma Mensagem</h3>
+                <p>Em breve, disponibilizaremos um formulário de contacto diretamente aqui na página para sua conveniência.</p>
+                <!-- Aqui poderia entrar um formulário de contacto no futuro -->
+                 <form id="contactForm" style="display: none;"> <!-- Escondido por agora -->
+                    <div>
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email_contact" name="email_contact" required>
+                    </div>
+                    <div>
+                        <label for="subject">Assunto:</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div>
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        .intro-contato {
+            text-align: center;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contact-channels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .channel-card {
+            background-color: var(--card-background);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            text-align: center;
+            border-top: 5px solid var(--primary-color);
+        }
+        .channel-card i { /* Estilo para ícones, se usados */
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .channel-card h3 {
+            font-family: var(--font-secondary);
+            color: var(--accent-color);
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+        .channel-card p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .channel-card a, .phone-number {
+            font-size: 1.1em;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .channel-card a:hover {
+            text-decoration: underline;
+        }
+        .contact-form-placeholder {
+            background-color: var(--secondary-color);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .contact-form-placeholder h3 {
+            color: var(--accent-color);
+            font-family: var(--font-secondary);
+            margin-bottom: 15px;
+        }
+        /* Estilos básicos para o formulário (se for ativado) */
+        #contactForm div {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        #contactForm label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        #contactForm input[type="text"],
+        #contactForm input[type="email"],
+        #contactForm textarea {
+            width: calc(100% - 22px); /* Considera padding e borda */
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: var(--font-primary);
+            font-size: 1em;
+        }
+        #contactForm textarea {
+            resize: vertical;
+        }
+        #contactForm button.btn {
+            display: block;
+            margin: 20px auto 0 auto;
+        }
+    </style>
+
+    <footer>
+        <p>© <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Simples script para preencher o assunto do formulário se vier da URL
+        // (o formulário está escondido por agora, mas o script pode ficar)
+        const urlParams = new URLSearchParams(window.location.search);
+        const subjectFromUrl = urlParams.get('assunto');
+        const produtoFromUrl = urlParams.get('produto');
+        const subjectField = document.getElementById('subject');
+
+        if (subjectField) {
+            if (subjectFromUrl) {
+                subjectField.value = subjectFromUrl.replace(/([A-Z])/g, ' $1').trim(); // Ex: "InteresseNeoReflect" -> "Interesse Neo Reflect"
+            }
+            if (produtoFromUrl) {
+                 subjectField.value = `Interesse no produto: ${produtoFromUrl.replace(/([A-Z])/g, ' $1').trim()}`;
+            }
+        }
+         // Se o formulário for ativado, este código pode ser usado para o envio
+        /*
+        const contactForm = document.getElementById('contactForm');
+        if(contactForm){
+            contactForm.addEventListener('submit', function(e){
+                e.preventDefault();
+                // Aqui iria a lógica de envio do formulário (ex: AJAX para um backend)
+                alert('Mensagem enviada (simulação)! Em um site real, isso seria processado no servidor.');
+                contactForm.reset();
+            });
+        }
+        */
+    </script>
+</body>
+</html>

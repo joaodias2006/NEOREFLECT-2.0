@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoReflect - Como Comprar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="home.html" style="text-decoration: none; color: inherit;">NeoReflect</a></h1>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="funcionalidades.html">Funcionalidades</a>
+            <a href="o-que-esperar.html">O que esperar</a>
+            <a href="tecnologia.html">Tecnologia</a>
+            <a href="como-comprar.html" class="active">Como Comprar</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="como-comprar">
+            <h2>Como Adquirir Seu NeoReflect</h2>
+            <div class="purchase-info">
+                <p>Estamos a trabalhar para que o NeoReflect chegue até si o mais breve possível! Em breve, os nossos espelhos inteligentes estarão disponíveis nas principais lojas online e em retalhistas especializados em tecnologia e beleza.</p>
+                <p><strong>Fique atento às nossas atualizações!</strong> Siga-nos nas redes sociais e subscreva a nossa newsletter para ser um dos primeiros a saber sobre o lançamento oficial e garantir o seu NeoReflect.</p>
+                <p>Com o NeoReflect, você dará o primeiro passo para uma nova era de beleza personalizada e inteligente. Mal podemos esperar para que você experiencie esta revolução!</p>
+                
+                <div class="launch-highlight">
+                    <p>🚀 Prepare-se para transformar a sua rotina! 🚀</p>
+                </div>
+                <a href="contato.html?assunto=InteresseNeoReflect" class="btn">Registar Interesse</a>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        .purchase-info {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: var(--card-background);
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px var(--shadow-color);
+        }
+        .purchase-info p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .launch-highlight {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .launch-highlight p {
+            font-size: 1.2em;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        #como-comprar .btn {
+            margin-top: 20px;
+        }
+    </style>
+
+    <footer>
+        <p>© <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

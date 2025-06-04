@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoReflect - O que Esperar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="home.html" style="text-decoration: none; color: inherit;">NeoReflect</a></h1>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="funcionalidades.html">Funcionalidades</a>
+            <a href="o-que-esperar.html" class="active">O que esperar</a>
+            <a href="tecnologia.html">Tecnologia</a>
+            <a href="como-comprar.html">Como Comprar</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="o-que-esperar"> <!-- Mantido o ID original, mas o título será do documento -->
+            <h2>O que Você Pode Esperar da NeoReflect</h2>
+            <p class="intro-expectativas">Ao adquirir um espelho inteligente NeoReflect, você está investindo em uma revolução para sua rotina de beleza e autocuidado. Prepare-se para:</p>
+            <ul>
+                <li>
+                    <span class="icon">💄</span> <!-- Exemplo de ícone, pode ser substituído por SVG ou Font Awesome -->
+                    <strong>Maquiagens mais precisas e personalizadas:</strong>
+                    <p>Com análises detalhadas e recomendações de IA, suas maquiagens atingirão um novo nível de perfeição, realçando seus melhores traços de forma única.</p>
+                </li>
+                <li>
+                    <span class="icon">🌿</span>
+                    <strong>Rotinas de cuidados com a pele ajustadas para suas necessidades:</strong>
+                    <p>Receba insights sobre sua pele e sugestões para uma rotina de skincare verdadeiramente eficaz e adaptada às suas particularidades.</p>
+                </li>
+                <li>
+                    <span class="icon">👗</span>
+                    <strong>Looks combinados que realçam seu estilo único:</strong>
+                    <p>Não se limite à beleza facial. Nosso assistente de moda integrado ajudará você a criar combinações de roupas e acessórios que expressam sua identidade.</p>
+                </li>
+                <li>
+                    <span class="icon">✨</span>
+                    <strong>A experiência de beleza mais interativa e divertida de todas:</strong>
+                    <p>Experimentar, descobrir e aprender sobre beleza nunca foi tão envolvente. O NeoReflect transforma o ato de se arrumar em um momento de prazer e autoconhecimento.</p>
+                </li>
+                 <li>
+                    <span class="icon">💡</span>
+                    <strong>Tecnologia intuitiva ao seu serviço:</strong>
+                    <p>Desfrute de uma interface amigável, controles personalizáveis de iluminação e temperatura, e a conveniência da integração com assistentes virtuais para facilitar seu dia a dia.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <style>
+        .intro-expectativas {
+            text-align: center;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #o-que-esperar ul li {
+            background-color: var(--card-background);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            border-left: 7px solid var(--accent-color); /* Cor de destaque diferente para esta seção */
+            box-shadow: 0 5px 15px var(--shadow-color);
+            display: flex; /* Para alinhar ícone e texto */
+            align-items: flex-start; /* Alinhar itens no topo */
+        }
+        #o-que-esperar ul li .icon {
+            font-size: 2em; /* Tamanho do ícone */
+            margin-right: 20px; /* Espaço entre ícone e texto */
+            color: var(--primary-color);
+            min-width: 40px; /* Largura mínima para o ícone */
+            text-align: center;
+        }
+        #o-que-esperar ul li div {
+            flex-grow: 1;
+        }
+        #o-que-esperar ul li strong {
+            font-family: var(--font-primary); /* Usando a fonte primária para o título do item */
+            font-weight: 700; /* Negrito */
+            font-size: 1.3em;
+            color: var(--primary-color); /* Cor primária para o título do item */
+            display: block;
+            margin-bottom: 8px;
+        }
+        #o-que-esperar ul li p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-top: 0; /* Remover margem superior do parágrafo */
+        }
+    </style>
+
+    <footer>
+        <p>© <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

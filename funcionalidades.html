@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoReflect - Funcionalidades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="home.html" style="text-decoration: none; color: inherit;">NeoReflect</a></h1>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="funcionalidades.html" class="active">Funcionalidades</a>
+            <a href="o-que-esperar.html">O que esperar</a>
+            <a href="tecnologia.html">Tecnologia</a>
+            <a href="como-comprar.html">Como Comprar</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="funcionalidades">
+            <h2>Funcionalidades Exclusivas NeoReflect</h2>
+            <p class="intro-funcionalidades">Nossos espelhos inteligentes são equipados com tecnologia de ponta para oferecer uma experiência de beleza e estilo verdadeiramente personalizada e interativa. Descubra o que o NeoReflect pode fazer por você:</p>
+            <ul>
+                <li>
+                    <strong>ANÁLISE DE TOM DE PELE:</strong>
+                    <p>Descubra o tom exato da sua pele com nossa análise precisa. Receba sugestões personalizadas de bases, corretivos e outras maquiagens que vão realçar sua beleza natural e garantir uma combinação perfeita.</p>
+                </li>
+                <li>
+                    <strong>MAQUIAGEM PERSONALIZADA POR IA:</strong>
+                    <p>Seja para um look natural do dia a dia ou uma produção ousada para uma ocasião especial, nossa Inteligência Artificial recomenda as melhores opções de maquiagem para você, considerando seu estilo único, preferências e as características do seu rosto.</p>
+                </li>
+                <li>
+                    <strong>REALIDADE AUMENTADA (AR):</strong>
+                    <p>Experimente diferentes tipos de maquiagens, cores e looks completos em tempo real, diretamente no seu reflexo! Com a Realidade Aumentada, você pode visualizar o resultado antes de aplicar qualquer produto, ajustando o visual conforme a iluminação do ambiente para uma escolha sempre acertada.</p>
+                </li>
+                <li>
+                    <strong>COMBINAÇÃO INTELIGENTE DE LOOKS:</strong>
+                    <p>Vá além da maquiagem! O NeoReflect conta com um assistente de moda integrado que ajuda você a combinar roupas e acessórios do seu guarda-roupa, sugerindo composições que valorizam seu estilo e são ideais para qualquer ocasião.</p>
+                </li>
+                 <li>
+                    <strong>CONTROLE DE AMBIENTE E ASSISTENTES VIRTUAIS:</strong>
+                    <p>Ajuste a iluminação e a temperatura do espelho para simular diferentes condições de luz e garantir que sua maquiagem esteja impecável em qualquer situação. Além disso, integre o NeoReflect com seus assistentes virtuais favoritos para uma experiência ainda mais conectada.</p>
+                </li>
+                 <li>
+                    <strong>ANÁLISE DE SAÚDE E BELEZA PERSONALIZADA:</strong>
+                    <p>Com sensores avançados, o NeoReflect pode auxiliar no acompanhamento de aspectos da saúde da sua pele, oferecendo insights e recomendações para otimizar sua rotina de cuidados pessoais.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <style>
+        .intro-funcionalidades {
+            text-align: center;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #funcionalidades ul li {
+            background-color: var(--card-background); /* Reutilizando estilo de card */
+            padding: 25px; /* Mais padding */
+            margin-bottom: 20px; /* Mais margem */
+            border-radius: 12px; /* Bordas mais arredondadas */
+            border-left: 7px solid var(--primary-color); /* Destaque lateral maior */
+            box-shadow: 0 5px 15px var(--shadow-color); /* Sombra mais pronunciada */
+        }
+        #funcionalidades ul li strong {
+            font-family: var(--font-secondary);
+            font-size: 1.5em; /* Título da funcionalidade maior */
+            color: var(--accent-color);
+            display: block;
+            margin-bottom: 10px;
+        }
+        #funcionalidades ul li p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+    </style>
+
+    <footer>
+        <p>© <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoReflect - Nossos Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="home.html" style="text-decoration: none; color: inherit;">NeoReflect</a></h1>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="produtos.html" class="active">Produtos</a>
+            <a href="funcionalidades.html">Funcionalidades</a>
+            <a href="o-que-esperar.html">O que esperar</a>
+            <a href="tecnologia.html">Tecnologia</a>
+            <a href="como-comprar.html">Como Comprar</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="produtos">
+            <h2>Nossos Produtos</h2>
+            <div class="products">
+                <div class="product" id="espelho-mesa">
+                    <!-- Imagem do documento: Imagem de um espelho de mesa retangular com luzes LED nas laterais, sobre uma base. -->
+                    <img src="https://placehold.co/400x350/f8e0e0/8d5b5b?text=Espelho+de+Mesa+Inteligente" alt="Espelho de Mesa Inteligente NeoReflect">
+                    <h3>Espelho de Mesa Inteligente</h3>
+                    <p>Eleve sua rotina de beleza com nosso espelho inteligente de mesa. Com iluminação LED ajustável, sensor de proximidade e análise básica da pele, ele oferece praticidade com estilo. O design compacto e sofisticado em tons rosé e bege combina com qualquer ambiente.</p>
+                    <p class="price"><strong>Preço: R$ 399 - R$ 699</strong></p>
+                    <a href="contato.html?produto=EspelhoDeMesa" class="btn product-btn">Consultar Disponibilidade</a>
+                </div>
+                <div class="product" id="espelho-maquiagem-ia">
+                    <!-- Imagem do documento: Imagem de um espelho de maquiagem redondo com iluminação circular, mostrando uma interface digital e uma pequena câmera na base. Ao lado, um porta-pincéis e um batom. -->
+                    <img src="https://placehold.co/400x350/fbeaea/b17c7c?text=Espelho+de+Maquiagem+com+IA" alt="Espelho de Maquiagem com IA NeoReflect">
+                    <h3>Espelho de Maquiagem com IA</h3>
+                    <p>Transforme seu ritual de beleza com o espelho inteligente com IA. Equipado com câmera de alta definição, sensores de pele e um sistema avançado de recomendação de maquiagem, ele analisa sua pele e entrega sugestões precisas. Com tela sensível ao toque e acabamento premium, é o seu assistente pessoal de beleza.</p>
+                    <p class="price"><strong>Preço: R$ 799 - R$ 1.299</strong></p>
+                     <a href="contato.html?produto=EspelhoMaquiagemIA" class="btn product-btn">Consultar Disponibilidade</a>
+                </div>
+                <div class="product" id="espelho-corpo-inteiro">
+                     <!-- Imagem do documento (não fornecida, usando placeholder genérico) -->
+                    <img src="https://placehold.co/400x350/fdf7f5/5e4b4b?text=Espelho+de+Corpo+Inteiro+IA" alt="Espelho de Corpo Inteiro Inteligente NeoReflect">
+                    <h3>Espelho de Corpo Inteiro Inteligente</h3>
+                    <p>Apresentamos o espelho inteligente de corpo inteiro: uma experiência de moda e tecnologia unidas. Com tela sensível ao toque e IA embarcada, ele analisa sua postura, combinações de roupas e entrega recomendações de estilo personalizadas. Ideal para closets, boutiques ou quem deseja um toque de inovação no dia a dia.</p>
+                    <p class="price"><strong>Preço: R$ 1.490 - R$ 2.490</strong></p>
+                    <a href="contato.html?produto=EspelhoCorpoInteiro" class="btn product-btn">Consultar Disponibilidade</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        .product .price {
+            font-size: 1.2em;
+            color: var(--primary-color);
+            margin-top: auto; /* Empurra o preço e botão para baixo */
+            padding-top: 15px; /* Espaço antes do preço */
+        }
+        .product-btn {
+            background-color: var(--accent-color);
+            font-size: 0.9em;
+            padding: 10px 20px;
+            margin-top: 15px; /* Espaço entre preço e botão */
+            width: calc(100% - 40px); /* Faz o botão ocupar a largura do card menos o padding */
+            box-sizing: border-box;
+        }
+        .product-btn:hover {
+            background-color: var(--primary-color);
+        }
+    </style>
+
+    <footer>
+        <p>© <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
