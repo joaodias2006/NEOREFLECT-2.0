@@ -3,112 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeoReflect - Funcionalidades</title>
-    <link rel="stylesheet" href="style.css">
+    <title>NeoReflect - Funcionalidades Exclusivas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        /* Tailwind Customization (mesma da index.html para consistência) */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'neo-primary': '#b17c7c',
+                        'neo-secondary': '#fbeaea',
+                        'neo-accent': '#8d5b5b',
+                        'neo-text': '#5e4b4b',
+                        'neo-light-text': '#ffffff',
+                        'neo-background': '#fdf7f5',
+                        'neo-card-background': '#ffffff',
+                        'neo-border': '#f0dada',
+                        'neo-hover-accent': '#9c6c6c',
+                    }
+                }
+            }
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdf7f5; /* neo-background */
+            color: #5e4b4b; /* neo-text */
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header h1, section h2, .feature-title { /* .feature-title para os títulos das funcionalidades */
+            font-family: 'Playfair Display', serif;
+        }
+        .active-link {
+            color: #8d5b5b; /* neo-accent */
+            font-weight: 600;
+        }
+        .active-link-mobile {
+            background-color: #f0dada; /* neo-border */
+            color: #8d5b5b; /* neo-accent */
+            font-weight: 600;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1><a href="home.html" style="text-decoration: none; color: inherit;">NeoReflect</a></h1>
-        <div class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+<body class="bg-neo-background font-sans text-neo-text">
+    <!-- Header -->
+    <header class="bg-neo-secondary shadow-md sticky top-0 z-50 py-5 px-6 md:px-10 flex justify-between items-center">
+        <h1 class="text-3xl text-neo-primary font-serif">
+            <a href="index.html">NeoReflect</a>
+        </h1>
+        <div class="md:hidden">
+            <button class="menu-toggle text-neo-primary focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="funcionalidades.html" class="active">Funcionalidades</a>
-            <a href="O-que-esperar.html">O que esperar</a>
-            <a href="tecnologia.html">Tecnologia</a>
-            <a href="como-comprar.html">Como Comprar</a>
-            <a href="contato.html">Contato</a>
+        <nav class="hidden md:flex space-x-6">
+            <a href="index.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Home</a>
+            <a href="sobre.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Sobre</a>
+            <a href="produtos.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Produtos</a>
+            <a href="funcionalidades.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Funcionalidades</a>
+            <a href="O-que-esperar.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">O que esperar</a>
+            <a href="tecnologia.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Tecnologia</a>
+            <a href="como-comprar.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Como Comprar</a>
+            <a href="contato.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Contato</a>
         </nav>
     </header>
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav hidden bg-neo-secondary shadow-lg py-2 md:hidden">
+        <a href="index.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Home</a>
+        <a href="sobre.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Sobre</a>
+        <a href="produtos.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Produtos</a>
+        <a href="funcionalidades.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Funcionalidades</a>
+        <a href="O-que-esperar.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">O que esperar</a>
+        <a href="tecnologia.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Tecnologia</a>
+        <a href="como-comprar.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Como Comprar</a>
+        <a href="contato.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Contato</a>
+    </nav>
 
-    <main>
-        <section id="funcionalidades">
-            <h2>Funcionalidades Exclusivas NeoReflect</h2>
-            <p class="intro-funcionalidades">Nossos espelhos inteligentes são equipados com tecnologia de ponta para oferecer uma experiência de beleza e estilo verdadeiramente personalizada e interativa. Descubra o que o NeoReflect pode fazer por você:</p>
-            <ul>
-                <li>
-                    <strong>ANÁLISE DE TOM DE PELE:</strong>
-                    <p>Descubra o tom exato da sua pele com nossa análise precisa. Receba sugestões personalizadas de bases, corretivos e outras maquiagens que vão realçar sua beleza natural e garantir uma combinação perfeita.</p>
+    <main class="container mx-auto px-4 py-8">
+        <section id="funcionalidades" class="py-12 md:py-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-neo-primary text-center mb-8 font-serif">Funcionalidades Exclusivas NeoReflect</h2>
+            <p class="intro-funcionalidades text-lg text-neo-text text-center max-w-3xl mx-auto mb-12">
+                Nossos espelhos inteligentes são equipados com tecnologia de ponta para oferecer uma experiência de beleza e estilo verdadeiramente personalizada e interativa. Descubra o que o NeoReflect pode fazer por você:
+            </p>
+            
+            <ul class="space-y-8">
+                <!-- Funcionalidade 1 -->
+                <li class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-primary transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-palette fa-2x text-neo-accent mt-1"></i>
+                        <div>
+                            <strong class="feature-title text-xl md:text-2xl text-neo-accent block mb-2">ANÁLISE DE TOM DE PELE</strong>
+                            <p class="text-neo-text">Descubra o tom exato da sua pele com nossa análise precisa. Receba sugestões personalizadas de bases, corretivos e outras maquiagens que vão realçar sua beleza natural e garantir uma combinação perfeita.</p>
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <strong>MAQUIAGEM PERSONALIZADA POR IA:</strong>
-                    <p>Seja para um look natural do dia a dia ou uma produção ousada para uma ocasião especial, nossa Inteligência Artificial recomenda as melhores opções de maquiagem para você, considerando seu estilo único, preferências e as características do seu rosto.</p>
+
+                <!-- Funcionalidade 2 -->
+                <li class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-primary transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-magic fa-2x text-neo-accent mt-1"></i>
+                        <div>
+                            <strong class="feature-title text-xl md:text-2xl text-neo-accent block mb-2">MAQUIAGEM PERSONALIZADA POR IA</strong>
+                            <p class="text-neo-text">Seja para um look natural do dia a dia ou uma produção ousada para uma ocasião especial, nossa Inteligência Artificial recomenda as melhores opções de maquiagem para você, considerando seu estilo único, preferências e as características do seu rosto.</p>
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <strong>REALIDADE AUMENTADA (AR):</strong>
-                    <p>Experimente diferentes tipos de maquiagens, cores e looks completos em tempo real, diretamente no seu reflexo! Com a Realidade Aumentada, você pode visualizar o resultado antes de aplicar qualquer produto, ajustando o visual conforme a iluminação do ambiente para uma escolha sempre acertada.</p>
+
+                <!-- Funcionalidade 3 -->
+                <li class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-primary transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-vr-cardboard fa-2x text-neo-accent mt-1"></i> <!-- Ícone para Realidade Aumentada -->
+                        <div>
+                            <strong class="feature-title text-xl md:text-2xl text-neo-accent block mb-2">REALIDADE AUMENTADA (AR)</strong>
+                            <p class="text-neo-text">Experimente diferentes tipos de maquiagens, cores e looks completos em tempo real, diretamente no seu reflexo! Com a Realidade Aumentada, você pode visualizar o resultado antes de aplicar qualquer produto, ajustando o visual conforme a iluminação do ambiente para uma escolha sempre acertada.</p>
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <strong>COMBINAÇÃO INTELIGENTE DE LOOKS:</strong>
-                    <p>Vá além da maquiagem! O NeoReflect conta com um assistente de moda integrado que ajuda você a combinar roupas e acessórios do seu guarda-roupa, sugerindo composições que valorizam seu estilo e são ideais para qualquer ocasião.</p>
+
+                <!-- Funcionalidade 4 -->
+                <li class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-primary transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-tshirt fa-2x text-neo-accent mt-1"></i> <!-- Ícone para Looks -->
+                        <div>
+                            <strong class="feature-title text-xl md:text-2xl text-neo-accent block mb-2">COMBINAÇÃO INTELIGENTE DE LOOKS</strong>
+                            <p class="text-neo-text">Vá além da maquiagem! O NeoReflect conta com um assistente de moda integrado que ajuda você a combinar roupas e acessórios do seu guarda-roupa, sugerindo composições que valorizam seu estilo e são ideais para qualquer ocasião.</p>
+                        </div>
+                    </div>
                 </li>
-                 <li>
-                    <strong>CONTROLE DE AMBIENTE E ASSISTENTES VIRTUAIS:</strong>
-                    <p>Ajuste a iluminação e a temperatura do espelho para simular diferentes condições de luz e garantir que sua maquiagem esteja impecável em qualquer situação. Além disso, integre o NeoReflect com seus assistentes virtuais favoritos para uma experiência ainda mais conectada.</p>
+
+                <!-- Funcionalidade 5 -->
+                 <li class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-primary transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-cogs fa-2x text-neo-accent mt-1"></i> <!-- Ícone para Controle/Assistentes -->
+                        <div>
+                            <strong class="feature-title text-xl md:text-2xl text-neo-accent block mb-2">CONTROLE DE AMBIENTE E ASSISTENTES VIRTUAIS</strong>
+                            <p class="text-neo-text">Ajuste a iluminação e a temperatura do espelho (em modelos aplicáveis) para simular diferentes condições de luz e garantir que sua maquiagem esteja impecável em qualquer situação. Além disso, integre o NeoReflect com seus assistentes virtuais favoritos para uma experiência ainda mais conectada e prática.</p>
+                        </div>
+                    </div>
                 </li>
-                 <li>
-                    <strong>ANÁLISE DE SAÚDE E BELEZA PERSONALIZADA:</strong>
-                    <p>Com sensores avançados, o NeoReflect pode auxiliar no acompanhamento de aspectos da saúde da sua pele, oferecendo insights e recomendações para otimizar sua rotina de cuidados pessoais.</p>
+
+                <!-- Funcionalidade 6 -->
+                <li class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-primary transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-heartbeat fa-2x text-neo-accent mt-1"></i> <!-- Ícone para Saúde/Beleza -->
+                        <div>
+                            <strong class="feature-title text-xl md:text-2xl text-neo-accent block mb-2">ANÁLISE DE SAÚDE E BELEZA PERSONALIZADA</strong>
+                            <p class="text-neo-text">Com sensores avançados (em modelos aplicáveis), o NeoReflect pode auxiliar no acompanhamento de aspectos da saúde da sua pele, oferecendo insights e recomendações para otimizar sua rotina de cuidados pessoais e bem-estar.</p>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </section>
     </main>
-
-    <style>
-        .intro-funcionalidades {
-            text-align: center;
-            font-size: 1.1em;
-            margin-bottom: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #funcionalidades ul li {
-            background-color: var(--card-background); /* Reutilizando estilo de card */
-            padding: 25px; /* Mais padding */
-            margin-bottom: 20px; /* Mais margem */
-            border-radius: 12px; /* Bordas mais arredondadas */
-            border-left: 7px solid var(--primary-color); /* Destaque lateral maior */
-            box-shadow: 0 5px 15px var(--shadow-color); /* Sombra mais pronunciada */
-        }
-        #funcionalidades ul li strong {
-            font-family: var(--font-secondary);
-            font-size: 1.5em; /* Título da funcionalidade maior */
-            color: var(--accent-color);
-            display: block;
-            margin-bottom: 10px;
-        }
-        #funcionalidades ul li p {
-            font-size: 1em;
-            line-height: 1.6;
-        }
-    </style>
-
-    <footer>
-        <p>© <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+    
+    <!-- Footer -->
+    <footer class="bg-neo-secondary text-neo-text text-center py-8 mt-12 border-t border-neo-border">
+        <p>&copy; <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+        <!-- VLibras Widget -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
     </footer>
+
     <script src="script.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
+        // VLibras initialization
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        if (menuToggle && mobileNav) {
+            menuToggle.addEventListener('click', () => {
+                mobileNav.classList.toggle('hidden');
+                const icon = menuToggle.querySelector('svg');
+                if (mobileNav.classList.contains('hidden')) {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>';
+                } else {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+                }
+            });
+        }
+        
+        // Highlight active nav link
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('header nav a');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+
+        navLinks.forEach(link => {
+            const linkHref = (link.getAttribute('href').split('/').pop() || 'index.html');
+            if (linkHref === currentPath) {
+                link.classList.add('active-link');
+            } else {
+                link.classList.remove('active-link');
+            }
+        });
+        mobileNavLinks.forEach(link => {
+            const linkHref = (link.getAttribute('href').split('/').pop() || 'index.html');
+            if (linkHref === currentPath) {
+                link.classList.add('active-link-mobile');
+            } else {
+                link.classList.remove('active-link-mobile');
+            }
+        });
+
+        // Specific styling for the active link (Funcionalidades page)
+         if (currentPath === 'funcionalidades.html') {
+            document.querySelector('nav a[href="funcionalidades.html"]').classList.add('text-neo-accent', 'font-semibold');
+             const mobileActiveLink = document.querySelector('.mobile-nav a[href="funcionalidades.html"]');
+            if(mobileActiveLink) mobileActiveLink.classList.add('bg-neo-border', 'text-neo-accent', 'font-semibold');
+        }
+
+        // Current year for footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
-</body>
-</html>
-
-<body>
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
 </body>
 </html>
