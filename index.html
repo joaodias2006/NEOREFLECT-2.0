@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeoReflect - O Espelho Inteligente que Sabe o que Você Precisa!</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> Removido pois o Tailwind está no head -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* Tailwind Customization */
+        /* Tailwind Customization - Padronizado */
         tailwind.config = {
             theme: {
                 extend: {
@@ -30,53 +30,42 @@
                 }
             }
         }
-        /* Adicionando estilos base do style.css que podem não ser cobertos pelo Tailwind ou para overrides específicos */
+        /* Estilos base e específicos para fontes serifadas */
         body {
-            font-family: var(--font-primary, 'Montserrat', sans-serif);
-            background-color: var(--background-color, #fdf7f5);
-            color: var(--text-color, #5e4b4b);
+            font-family: 'Montserrat', sans-serif; /* Fonte padrão do corpo */
+            background-color: #fdf7f5; /* Cor de fundo neo-background */
+            color: #5e4b4b; /* Cor de texto neo-text */
             line-height: 1.6;
             overflow-x: hidden;
         }
-        header h1 {
-            font-family: var(--font-secondary, 'Playfair Display', serif);
+        /* Aplicando a fonte serifada aos títulos principais */
+        header h1, section h2, .feature-item h3, .product h3, #call-to-action-home h2 {
+            font-family: 'Playfair Display', serif;
         }
-        section h2 {
-            font-family: var(--font-secondary, 'Playfair Display', serif);
+        .hero h2 { /* Específico para o h2 da seção hero que já tem a classe */
+             font-family: 'Playfair Display', serif;
         }
-        .hero h2 {
-             font-family: var(--font-secondary, 'Playfair Display', serif);
-        }
-         #call-to-action-home h2{
-            font-family: var(--font-secondary, 'Playfair Display', serif);
-        }
-        .feature-item h3{
-            font-family: var(--font-secondary, 'Playfair Display', serif);
-        }
-        .product h3{
-            font-family: var(--font-secondary, 'Playfair Display', serif);
-        }
-         .active-link {
+        .active-link { /* Estilo para link ativo na navegação desktop */
             color: #8d5b5b; /* neo-accent */
-            font-weight: 600;
+            font-weight: 600; /* semibold */
         }
-        .active-link-mobile {
+        .active-link-mobile { /* Estilo para link ativo na navegação mobile */
             background-color: #f0dada; /* neo-border */
             color: #8d5b5b; /* neo-accent */
-            font-weight: 600;
+            font-weight: 600; /* semibold */
         }
-
     </style>
 </head>
 <body class="bg-neo-background font-sans text-neo-text">
     <!-- Header -->
     <header class="bg-neo-secondary shadow-md sticky top-0 z-50 py-5 px-6 md:px-10 flex justify-between items-center">
-        <h1 class="text-3xl text-neo-primary font-serif">
+        <h1 class="text-3xl text-neo-primary">
             <a href="index.html">NeoReflect</a>
         </h1>
         <div class="md:hidden">
             <button class="menu-toggle text-neo-primary focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <svg class="w-6 h-6 icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <svg class="w-6 h-6 icon-close hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
         </div>
         <nav class="hidden md:flex space-x-6">
@@ -97,145 +86,4 @@
         <a href="produtos.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Produtos</a>
         <a href="funcionalidades.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Funcionalidades</a>
         <a href="O-que-esperar.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">O que esperar</a>
-        <a href="tecnologia.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Tecnologia</a>
-        <a href="como-comprar.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Como Comprar</a>
-        <a href="contato.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Contato</a>
-    </nav>
-
-    <main class="container mx-auto px-4 py-8">
-        <!-- Hero Section -->
-        <section class="hero text-center bg-gradient-to-r from-neo-secondary via-pink-50 to-fuchsia-100 p-8 md:p-16 rounded-2xl shadow-xl my-8 min-h-[60vh] flex flex-col items-center justify-center">
-            <h2 class="text-4xl md:text-5xl font-bold text-neo-accent mb-6 font-serif">“O Espelho Inteligente que Sabe o que Você Precisa!”</h2>
-            <p class="text-lg md:text-xl text-neo-text max-w-2xl mx-auto mb-8">
-                NeoReflect combina tecnologia de ponta e design elegante para transformar sua rotina. Nossos espelhos inteligentes analisam, aconselham e inspiram, adaptando-se dinamicamente a você com base em pesquisas ergonômicas e dermatológicas.
-            </p>
-            <a href="produtos.html" class="btn bg-neo-primary text-neo-light-text py-3 px-8 rounded-full text-lg font-semibold hover:bg-neo-hover-accent transition-transform transform hover:scale-105 shadow-lg">Descubra Nossos Produtos</a>
-        </section>
-
-        <!-- Destaques Section -->
-        <section id="destaques" class="py-12 md:py-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-neo-primary text-center mb-12 font-serif">Por que NeoReflect?</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Feature Item 1 -->
-                <div class="feature-item bg-neo-card-background p-6 rounded-xl shadow-lg text-center flex flex-col">
-                    <h3 class="text-2xl font-semibold text-neo-accent mb-3 font-serif">Adaptação Inteligente</h3>
-                    <p class="text-neo-text flex-grow">Nossos espelhos aprendem com você, adaptando-se ao seu corpo, etnia e estilo com base em pesquisas ergonômicas e dermatológicas, oferecendo sugestões cada vez mais precisas.</p>
-                </div>
-                <!-- Feature Item 2 -->
-                <div class="feature-item bg-neo-card-background p-6 rounded-xl shadow-lg text-center flex flex-col">
-                    <h3 class="text-2xl font-semibold text-neo-accent mb-3 font-serif">Beleza Personalizada com IA</h3>
-                    <p class="text-neo-text flex-grow">Receba análises de tom de pele, sugestões de maquiagem e looks completos, tudo personalizado pela nossa Inteligência Artificial para realçar sua beleza única.</p>
-                </div>
-                <!-- Feature Item 3 -->
-                <div class="feature-item bg-neo-card-background p-6 rounded-xl shadow-lg text-center flex flex-col">
-                    <h3 class="text-2xl font-semibold text-neo-accent mb-3 font-serif">Experiência Interativa Completa</h3>
-                    <p class="text-neo-text flex-grow">Use Realidade Aumentada para experimentar visuais, integre com assistentes virtuais, controle a iluminação e temperatura do ambiente, e acompanhe a saúde da sua pele.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Produtos Preview Section -->
-        <section id="produtos-preview" class="py-12 md:py-16 bg-neo-secondary rounded-2xl my-8 p-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-neo-primary text-center mb-12 font-serif">Conheça Nossos Produtos Premium</h2>
-            <div class="products grid md:grid-cols-2 gap-8 md:gap-12 justify-center">
-                <!-- Product 2 -->
-                <div class="product bg-neo-card-background p-6 rounded-xl shadow-lg text-center flex flex-col transition-transform transform hover:scale-105 duration-300 max-w-md mx-auto">
-                    <img src="https://placehold.co/400x300/fbeaea/b17c7c?text=Maquiagem+com+IA" alt="Espelho de Maquiagem com IA" class="w-full h-56 object-cover rounded-lg mb-4 shadow-md" onerror="this.src='https://placehold.co/400x300/cccccc/333333?text=Imagem+Indisponível'">
-                    <h3 class="text-2xl font-semibold text-neo-accent mb-2 font-serif">Espelho de Maquiagem com IA</h3>
-                    <p class="text-neo-text mb-3 flex-grow">Transforme seu ritual de beleza com o espelho inteligente com IA. Equipado com câmera de alta definição, sensores de pele e um sistema avançado de recomendação de maquiagem, ele analisa sua pele e entrega sugestões precisas. Com tela sensível ao toque e acabamento premium, é o seu assistente pessoal de beleza.</p>
-                    <p class="price-preview text-xl font-bold text-neo-primary my-3"><strong>R$ 13.499 - R$ 14.999</strong></p>
-                    <a href="produtos.html#espelho-maquiagem-ia" class="btn product-btn bg-neo-accent text-neo-light-text py-2 px-6 rounded-full font-semibold hover:bg-neo-primary transition-colors w-full mt-auto">Saiba Mais</a>
-                </div>
-                <!-- Product 3 -->
-                <div class="product bg-neo-card-background p-6 rounded-xl shadow-lg text-center flex flex-col transition-transform transform hover:scale-105 duration-300 max-w-md mx-auto">
-                    <img src="https://placehold.co/400x300/fdf7f5/5e4b4b?text=Corpo+Inteiro+IA" alt="Espelho de Corpo Inteiro Inteligente" class="w-full h-56 object-cover rounded-lg mb-4 shadow-md" onerror="this.src='https://placehold.co/400x300/cccccc/333333?text=Imagem+Indisponível'">
-                    <h3 class="text-2xl font-semibold text-neo-accent mb-2 font-serif">Espelho de Corpo Inteiro Inteligente</h3>
-                    <p class="text-neo-text mb-3 flex-grow">Apresentamos o espelho inteligente de corpo inteiro: uma experiência de moda e tecnologia unidas. Com tela sensível ao toque e IA embarcada, ele analisa sua postura, combinações de roupas e entrega recomendações de estilo personalizadas. Ideal para closets, boutiques ou quem deseja um toque de inovação no dia a dia.</p>
-                    <p class="price-preview text-xl font-bold text-neo-primary my-3"><strong>R$ 25.499 - R$ 27.999</strong></p>
-                    <a href="produtos.html#espelho-corpo-inteiro" class="btn product-btn bg-neo-accent text-neo-light-text py-2 px-6 rounded-full font-semibold hover:bg-neo-primary transition-colors w-full mt-auto">Saiba Mais</a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Call to Action Section -->
-        <section id="call-to-action-home" class="text-center bg-gradient-to-br from-neo-secondary via-pink-100 to-fuchsia-200 p-10 md:p-16 rounded-2xl shadow-xl my-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-neo-accent mb-4 font-serif">Seja a melhor versão de você!</h2>
-            <p class="text-lg md:text-xl text-neo-text max-w-xl mx-auto mb-6">Com NeoReflect, descubra a sua verdadeira beleza todos os dias e compartilhe o que há de melhor em você com o mundo.</p>
-            <div class="hashtags-home mb-8 space-x-2 space-y-2">
-                <span class="inline-block bg-neo-primary text-neo-light-text px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:scale-105 transform transition-transform">#NeoReflectBeauty</span>
-                <span class="inline-block bg-neo-primary text-neo-light-text px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:scale-105 transform transition-transform">#BelezaInteligente</span>
-                <span class="inline-block bg-neo-primary text-neo-light-text px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:scale-105 transform transition-transform">#TransformeSeuLook</span>
-            </div>
-            <a href="contato.html" class="btn bg-neo-accent text-neo-light-text py-3 px-8 rounded-full text-lg font-semibold hover:bg-neo-primary transition-transform transform hover:scale-105 shadow-lg">Entre em Contato</a>
-        </section>
-
-    </main>
-    
-    <!-- Footer -->
-    <footer class="bg-neo-secondary text-neo-text text-center py-8 mt-12 border-t border-neo-border">
-        <p>&copy; <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
-        <!-- VLibras Widget -->
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        // VLibras initialization
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-
-        // Mobile menu toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const mobileNav = document.querySelector('.mobile-nav');
-        if (menuToggle && mobileNav) {
-            menuToggle.addEventListener('click', () => {
-                mobileNav.classList.toggle('hidden');
-                // Animate hamburger icon (optional, can be done with CSS transitions too)
-                const icon = menuToggle.querySelector('svg');
-                if (mobileNav.classList.contains('hidden')) {
-                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>';
-                } else {
-                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
-                }
-            });
-        }
-        
-        // Highlight active nav link
-        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-        const navLinks = document.querySelectorAll('header nav a');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
-
-        navLinks.forEach(link => {
-            const linkHref = (link.getAttribute('href').split('/').pop() || 'index.html');
-            if (linkHref === currentPath) {
-                link.classList.add('active-link');
-            } else {
-                link.classList.remove('active-link');
-            }
-        });
-        mobileNavLinks.forEach(link => {
-            const linkHref = (link.getAttribute('href').split('/').pop() || 'index.html');
-            if (linkHref === currentPath) {
-                link.classList.add('active-link-mobile');
-            } else {
-                link.classList.remove('active-link-mobile');
-            }
-        });
-         // Specific styling for the active link (Home page)
-        if (currentPath === 'index.html' || currentPath === '') {
-            document.querySelector('nav a[href="index.html"]').classList.add('text-neo-accent', 'font-semibold');
-            const mobileActiveLink = document.querySelector('.mobile-nav a[href="index.html"]');
-            if(mobileActiveLink) mobileActiveLink.classList.add('bg-neo-border', 'text-neo-accent', 'font-semibold');
-        }
-
-
-        // Current year for footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
-</body>
-</html>
+        <a href="tecnologia.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">T
