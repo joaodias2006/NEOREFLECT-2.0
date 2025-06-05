@@ -3,127 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeoReflect - O que Esperar</title>
-    <link rel="stylesheet" href="style.css">
+    <title>NeoReflect - O Que Você Pode Esperar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        /* Tailwind Customization (mesma da index.html para consistência) */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'neo-primary': '#b17c7c',
+                        'neo-secondary': '#fbeaea',
+                        'neo-accent': '#8d5b5b',
+                        'neo-text': '#5e4b4b',
+                        'neo-light-text': '#ffffff',
+                        'neo-background': '#fdf7f5',
+                        'neo-card-background': '#ffffff',
+                        'neo-border': '#f0dada',
+                        'neo-hover-accent': '#9c6c6c',
+                    }
+                }
+            }
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdf7f5; /* neo-background */
+            color: #5e4b4b; /* neo-text */
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header h1, section h2, .expectation-title {
+            font-family: 'Playfair Display', serif;
+        }
+        .active-link {
+            color: #8d5b5b; /* neo-accent */
+            font-weight: 600;
+        }
+        .active-link-mobile {
+            background-color: #f0dada; /* neo-border */
+            color: #8d5b5b; /* neo-accent */
+            font-weight: 600;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1><a href="home.html" style="text-decoration: none; color: inherit;">NeoReflect</a></h1>
-        <div class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+<body class="bg-neo-background font-sans text-neo-text">
+    <!-- Header -->
+    <header class="bg-neo-secondary shadow-md sticky top-0 z-50 py-5 px-6 md:px-10 flex justify-between items-center">
+        <h1 class="text-3xl text-neo-primary font-serif">
+            <a href="index.html">NeoReflect</a>
+        </h1>
+        <div class="md:hidden">
+            <button class="menu-toggle text-neo-primary focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="funcionalidades.html">Funcionalidades</a>
-            <a href="O-que-esperar.html" class="active">O que esperar</a>
-            <a href="tecnologia.html">Tecnologia</a>
-            <a href="como-comprar.html">Como Comprar</a>
-            <a href="contato.html">Contato</a>
+        <nav class="hidden md:flex space-x-6">
+            <a href="index.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Home</a>
+            <a href="sobre.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Sobre</a>
+            <a href="produtos.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Produtos</a>
+            <a href="funcionalidades.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Funcionalidades</a>
+            <a href="O-que-esperar.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">O que esperar</a>
+            <a href="tecnologia.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Tecnologia</a>
+            <a href="como-comprar.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Como Comprar</a>
+            <a href="contato.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Contato</a>
         </nav>
     </header>
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav hidden bg-neo-secondary shadow-lg py-2 md:hidden">
+        <a href="index.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Home</a>
+        <a href="sobre.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Sobre</a>
+        <a href="produtos.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Produtos</a>
+        <a href="funcionalidades.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Funcionalidades</a>
+        <a href="O-que-esperar.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">O que esperar</a>
+        <a href="tecnologia.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Tecnologia</a>
+        <a href="como-comprar.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Como Comprar</a>
+        <a href="contato.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Contato</a>
+    </nav>
 
-    <main>
-        <section id="O-que-esperar"> <!-- Mantido o ID original, mas o título será do documento -->
-            <h2>O que Você Pode Esperar da NeoReflect</h2>
-            <p class="intro-expectativas">Ao adquirir um espelho inteligente NeoReflect, você está investindo em uma revolução para sua rotina de beleza e autocuidado. Prepare-se para:</p>
-            <ul>
-                <li>
-                    <span class="icon">💄</span> <!-- Exemplo de ícone, pode ser substituído por SVG ou Font Awesome -->
-                    <strong>Maquiagens mais precisas e personalizadas:</strong>
-                    <p>Com análises detalhadas e recomendações de IA, suas maquiagens atingirão um novo nível de perfeição, realçando seus melhores traços de forma única.</p>
+    <main class="container mx-auto px-4 py-8">
+        <section id="o-que-esperar" class="py-12 md:py-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-neo-primary text-center mb-8 font-serif">O Que Você Pode Esperar da NeoReflect</h2>
+            <p class="intro-expectativas text-lg text-neo-text text-center max-w-3xl mx-auto mb-12">
+                Ao adquirir um espelho inteligente NeoReflect, você está a investir numa revolução para a sua rotina de beleza e autocuidado. Prepare-se para:
+            </p>
+            
+            <ul class="space-y-8 max-w-2xl mx-auto">
+                <!-- Expectativa 1 -->
+                <li class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-accent transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-paint-brush fa-2x text-neo-primary mt-1"></i>
+                        <div>
+                            <strong class="expectation-title text-xl md:text-2xl text-neo-accent block mb-2">Maquilhagens mais precisas e personalizadas.</strong>
+                            <p class="text-neo-text">Com análises detalhadas e recomendações de IA, as suas maquilhagens atingirão um novo nível de perfeição, realçando os seus melhores traços de forma única.</p>
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <span class="icon">🌿</span>
-                    <strong>Rotinas de cuidados com a pele ajustadas para suas necessidades:</strong>
-                    <p>Receba insights sobre sua pele e sugestões para uma rotina de skincare verdadeiramente eficaz e adaptada às suas particularidades.</p>
+
+                <!-- Expectativa 2 -->
+                <li class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-accent transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-spa fa-2x text-neo-primary mt-1"></i>
+                        <div>
+                            <strong class="expectation-title text-xl md:text-2xl text-neo-accent block mb-2">Rotinas de cuidados com a pele ajustadas para as suas necessidades.</strong>
+                            <p class="text-neo-text">Receba insights sobre a sua pele e sugestões para uma rotina de skincare verdadeiramente eficaz e adaptada às suas particularidades.</p>
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <span class="icon">👗</span>
-                    <strong>Looks combinados que realçam seu estilo único:</strong>
-                    <p>Não se limite à beleza facial. Nosso assistente de moda integrado ajudará você a criar combinações de roupas e acessórios que expressam sua identidade.</p>
+
+                <!-- Expectativa 3 -->
+                <li class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-accent transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-user-check fa-2x text-neo-primary mt-1"></i> <!-- Ícone para Looks -->
+                        <div>
+                            <strong class="expectation-title text-xl md:text-2xl text-neo-accent block mb-2">Looks combinados que realçam o seu estilo único.</strong>
+                            <p class="text-neo-text">Não se limite à beleza facial. O nosso assistente de moda integrado ajudá-la-á a criar combinações de roupas e acessórios que expressam a sua identidade.</p>
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <span class="icon">✨</span>
-                    <strong>A experiência de beleza mais interativa e divertida de todas:</strong>
-                    <p>Experimentar, descobrir e aprender sobre beleza nunca foi tão envolvente. O NeoReflect transforma o ato de se arrumar em um momento de prazer e autoconhecimento.</p>
+
+                <!-- Expectativa 4 -->
+                <li class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-accent transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-star fa-2x text-neo-primary mt-1"></i> <!-- Ícone para Experiência -->
+                        <div>
+                            <strong class="expectation-title text-xl md:text-2xl text-neo-accent block mb-2">A experiência de beleza mais interativa e divertida de todas.</strong>
+                            <p class="text-neo-text">Experimentar, descobrir e aprender sobre beleza nunca foi tão envolvente. O NeoReflect transforma o ato de se arranjar num momento de prazer e autoconhecimento.</p>
+                        </div>
+                    </div>
                 </li>
-                 <li>
-                    <span class="icon">💡</span>
-                    <strong>Tecnologia intuitiva ao seu serviço:</strong>
-                    <p>Desfrute de uma interface amigável, controles personalizáveis de iluminação e temperatura, e a conveniência da integração com assistentes virtuais para facilitar seu dia a dia.</p>
+                 <!-- Expectativa 5 (Adicional, baseado no que foi adicionado em Funcionalidades) -->
+                <li class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-accent transform hover:scale-[1.02] transition-transform duration-300">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-lightbulb fa-2x text-neo-primary mt-1"></i>
+                        <div>
+                            <strong class="expectation-title text-xl md:text-2xl text-neo-accent block mb-2">Tecnologia intuitiva ao seu serviço.</strong>
+                            <p class="text-neo-text">Desfrute de uma interface amigável, controlos personalizáveis de iluminação e temperatura (em modelos aplicáveis), e a conveniência da integração com assistentes virtuais para facilitar o seu dia a dia.</p>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </section>
     </main>
-
-    <style>
-        .intro-expectativas {
-            text-align: center;
-            font-size: 1.1em;
-            margin-bottom: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #o-que-esperar ul li {
-            background-color: var(--card-background);
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            border-left: 7px solid var(--accent-color); /* Cor de destaque diferente para esta seção */
-            box-shadow: 0 5px 15px var(--shadow-color);
-            display: flex; /* Para alinhar ícone e texto */
-            align-items: flex-start; /* Alinhar itens no topo */
-        }
-        #o-que-esperar ul li .icon {
-            font-size: 2em; /* Tamanho do ícone */
-            margin-right: 20px; /* Espaço entre ícone e texto */
-            color: var(--primary-color);
-            min-width: 40px; /* Largura mínima para o ícone */
-            text-align: center;
-        }
-        #o-que-esperar ul li div {
-            flex-grow: 1;
-        }
-        #o-que-esperar ul li strong {
-            font-family: var(--font-primary); /* Usando a fonte primária para o título do item */
-            font-weight: 700; /* Negrito */
-            font-size: 1.3em;
-            color: var(--primary-color); /* Cor primária para o título do item */
-            display: block;
-            margin-bottom: 8px;
-        }
-        #o-que-esperar ul li p {
-            font-size: 1em;
-            line-height: 1.6;
-            margin-top: 0; /* Remover margem superior do parágrafo */
-        }
-    </style>
-
-    <footer>
-        <p>© <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+    
+    <!-- Footer -->
+    <footer class="bg-neo-secondary text-neo-text text-center py-8 mt-12 border-t border-neo-border">
+        <p>&copy; <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+        <!-- VLibras Widget -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
     </footer>
+
     <script src="script.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
+        // VLibras initialization
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        if (menuToggle && mobileNav) {
+            menuToggle.addEventListener('click', () => {
+                mobileNav.classList.toggle('hidden');
+                const icon = menuToggle.querySelector('svg');
+                if (mobileNav.classList.contains('hidden')) {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>';
+                } else {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+                }
+            });
+        }
+        
+        // Highlight active nav link
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('header nav a');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+
+        navLinks.forEach(link => {
+            const linkHref = (link.getAttribute('href').split('/').pop() || 'index.html');
+            if (linkHref === currentPath) {
+                link.classList.add('active-link');
+            } else {
+                link.classList.remove('active-link');
+            }
+        });
+        mobileNavLinks.forEach(link => {
+            const linkHref = (link.getAttribute('href').split('/').pop() || 'index.html');
+            if (linkHref === currentPath) {
+                link.classList.add('active-link-mobile');
+            } else {
+                link.classList.remove('active-link-mobile');
+            }
+        });
+
+        // Specific styling for the active link (O que esperar page)
+         if (currentPath === 'O-que-esperar.html') {
+            document.querySelector('nav a[href="O-que-esperar.html"]').classList.add('text-neo-accent', 'font-semibold');
+            const mobileActiveLink = document.querySelector('.mobile-nav a[href="O-que-esperar.html"]');
+            if(mobileActiveLink) mobileActiveLink.classList.add('bg-neo-border', 'text-neo-accent', 'font-semibold');
+        }
+
+        // Current year for footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
-</body>
-</html>
-
-<body>
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
 </body>
 </html>
