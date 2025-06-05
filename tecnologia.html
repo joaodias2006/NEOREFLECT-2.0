@@ -1,56 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF.[5]">
+    <meta charset="UTF-8"> <!-- Corrigido para UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeoReflect - Tecnologia</title>
-    <link rel="stylesheet" href="style.css">
+    <title>NeoReflect - A Tecnologia por Trás da Magia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Tailwind Customization (mesma da index.html para consistência) */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'neo-primary': '#b17c7c',
+                        'neo-secondary': '#fbeaea',
+                        'neo-accent': '#8d5b5b',
+                        'neo-text': '#5e4b4b',
+                        'neo-light-text': '#ffffff',
+                        'neo-background': '#fdf7f5',
+                        'neo-card-background': '#ffffff',
+                        'neo-border': '#f0dada',
+                        'neo-hover-accent': '#9c6c6c',
+                    }
+                }
+            }
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdf7f5; /* neo-background */
+            color: #5e4b4b; /* neo-text */
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header h1, section h2, .tech-subtitle {
+            font-family: 'Playfair Display', serif;
+        }
+        .active-link {
+            color: #8d5b5b; /* neo-accent */
+            font-weight: 600;
+        }
+        .active-link-mobile {
+            background-color: #f0dada; /* neo-border */
+            color: #8d5b5b; /* neo-accent */
+            font-weight: 600;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>NeoReflect</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="funcionalidades.html">Funcionalidades</a>
-            <a href="O-que-esperar.html">O que esperar</a>
-            <a href="tecnologia.html">Tecnologia</a>
-            <a href="como-comprar.html">Como Comprar</a>
-            <a href="contato.html">Contato</a>
+<body class="bg-neo-background font-sans text-neo-text">
+    <!-- Header -->
+    <header class="bg-neo-secondary shadow-md sticky top-0 z-50 py-5 px-6 md:px-10 flex justify-between items-center">
+        <h1 class="text-3xl text-neo-primary font-serif">
+            <a href="index.html">NeoReflect</a> <!-- Link para home -->
+        </h1>
+        <div class="md:hidden">
+            <button class="menu-toggle text-neo-primary focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+            <a href="index.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Home</a>
+            <a href="sobre.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Sobre</a>
+            <a href="produtos.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Produtos</a>
+            <a href="funcionalidades.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Funcionalidades</a>
+            <a href="O-que-esperar.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">O que esperar</a>
+            <a href="tecnologia.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Tecnologia</a>
+            <a href="como-comprar.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Como Comprar</a>
+            <a href="contato.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Contato</a>
         </nav>
     </header>
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav hidden bg-neo-secondary shadow-lg py-2 md:hidden">
+        <a href="index.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Home</a>
+        <a href="sobre.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Sobre</a>
+        <a href="produtos.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Produtos</a>
+        <a href="funcionalidades.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Funcionalidades</a>
+        <a href="O-que-esperar.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">O que esperar</a>
+        <a href="tecnologia.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Tecnologia</a>
+        <a href="como-comprar.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Como Comprar</a>
+        <a href="contato.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Contato</a>
+    </nav>
 
-    <section id="tecnologia">
-        <h2>Pilha Tecnológica Proposta</h2>
-        <p>Para construir uma plataforma de e-commerce rica em recursos e impulsionada por IA, capaz de suportar as necessidades atuais e futuras da NeoReflect, propomos a seguinte pilha tecnológica:</p>
-        <h3>Desenvolvimento Front-end</h3>
-        <p>As linguagens centrais para o desenvolvimento front-end permanecem o <strong>HTML (HyperText Markup Language)</strong>, essencial para estruturar o conteúdo da web [2]; o <strong>CSS (Cascading Style Sheets)</strong>, crucial para controlar a apresentação visual, o layout e os elementos estéticos do site [2]; e o <strong>JavaScript</strong>, indispensável para adicionar interatividade, comportamento dinâmico e atualizações em tempo real às páginas web.[2] Para construir interfaces de usuário dinâmicas e responsivas, recomenda-se a utilização de frameworks ou bibliotecas modernas como <strong>React</strong> ou <strong>Vue.js</strong>.[2]</p>
-        <h3>Desenvolvimento Back-end</h3>
-        <p>O back-end será responsável pela lógica de negócios crítica, interações com o banco de dados, autenticação de usuários e APIs. A combinação de <strong>Node.js com Express.js</strong> é altamente recomendada, permitindo JavaScript em todo o desenvolvimento (full-stack JavaScript).[3] Como alternativa, <strong>Python com Django ou Flask</strong> é uma opção robusta, especialmente forte em Inteligência Artificial (IA) e Machine Learning (ML), alinhando-se com o foco dos produtos NeoReflect.[3]</p>
-        <h3>Soluções de Banco de Dados</h3>
-        <p>Para dados transacionais, contas de usuário e catálogo de produtos, <strong>PostgreSQL</strong> é um sistema de gerenciamento de banco de dados objeto-relacional (ORDBMS) poderoso e flexível.[4] Como alternativa, <strong>MySQL</strong> é um banco de dados relacional confiável e rápido.[4] Para dados flexíveis, caching e análises em tempo real, <strong>MongoDB (NoSQL)</strong> é ideal para aplicações com estruturas de dados em rápida mudança [4], e <strong>Redis (In-memory Data Store)</strong> é conhecido por sua velocidade notável para caching e armazenamento de sessão.[4]</p>
-        <h3>Hospedagem e Infraestrutura em Nuvem</h3>
-        <p>As plataformas de nuvem oferecem escalabilidade, confiabilidade e custo-benefício incomparáveis. As principais escolhas incluem <strong>Amazon Web Services (AWS)</strong>, <strong>Microsoft Azure</strong> e <strong>Google Cloud Platform (GCP)</strong>, que fornecem infraestrutura robusta, conjuntos de ferramentas extensos e alcance global.[5]</p>
-    </section>
+    <main class="container mx-auto px-4 py-8">
+        <section id="tecnologia" class="py-12 md:py-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-neo-primary text-center mb-8 font-serif">A Tecnologia por Trás da Magia NeoReflect</h2>
+            <p class="text-lg text-neo-text text-center max-w-3xl mx-auto mb-12">
+                Para construir uma plataforma de espelhos inteligentes rica em recursos e impulsionada por IA, capaz de suportar as necessidades atuais e futuras da NeoReflect, consideramos uma pilha tecnológica robusta e escalável.
+            </p>
 
-    <footer>
-        <p>© 2025 NeoReflect. Todos os direitos reservados.</p>
+            <div class="space-y-10 max-w-4xl mx-auto">
+                <div class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-primary">
+                    <h3 class="tech-subtitle text-2xl md:text-3xl font-semibold text-neo-accent mb-4">Desenvolvimento Front-end</h3>
+                    <p class="text-neo-text text-lg leading-relaxed">As linguagens centrais para o desenvolvimento front-end permanecem o <strong>HTML (HyperText Markup Language)</strong>, essencial para estruturar o conteúdo da web; o <strong>CSS (Cascading Style Sheets)</strong>, crucial para controlar a apresentação visual, o layout e os elementos estéticos do site; e o <strong>JavaScript</strong>, indispensável para adicionar interatividade, comportamento dinâmico e atualizações em tempo real às páginas web. Para construir interfaces de utilizador dinâmicas e responsivas, recomenda-se a utilização de frameworks ou bibliotecas modernas como <strong>React</strong> ou <strong>Vue.js</strong>.</p>
+                </div>
+
+                <div class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-primary">
+                    <h3 class="tech-subtitle text-2xl md:text-3xl font-semibold text-neo-accent mb-4">Desenvolvimento Back-end</h3>
+                    <p class="text-neo-text text-lg leading-relaxed">O back-end será responsável pela lógica de negócios crítica, interações com a base de dados, autenticação de utilizadores e APIs. A combinação de <strong>Node.js com Express.js</strong> é altamente recomendada, permitindo JavaScript em todo o desenvolvimento (full-stack JavaScript). Como alternativa, <strong>Python com Django ou Flask</strong> é uma opção robusta, especialmente forte em Inteligência Artificial (IA) e Machine Learning (ML), alinhando-se com o foco dos produtos NeoReflect.</p>
+                </div>
+
+                <div class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-primary">
+                    <h3 class="tech-subtitle text-2xl md:text-3xl font-semibold text-neo-accent mb-4">Soluções de Base de Dados</h3>
+                    <p class="text-neo-text text-lg leading-relaxed">Para dados transacionais, contas de utilizador e catálogo de produtos, <strong>PostgreSQL</strong> é um sistema de gestão de base de dados objeto-relacional (ORDBMS) poderoso e flexível. Como alternativa, <strong>MySQL</strong> é uma base de dados relacional confiável e rápida. Para dados flexíveis, caching e análises em tempo real, <strong>MongoDB (NoSQL)</strong> é ideal para aplicações com estruturas de dados em rápida mudança, e <strong>Redis (In-memory Data Store)</strong> é conhecido por sua velocidade notável para caching e armazenamento de sessão.</p>
+                </div>
+
+                <div class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-primary">
+                    <h3 class="tech-subtitle text-2xl md:text-3xl font-semibold text-neo-accent mb-4">Hospedagem e Infraestrutura em Nuvem</h3>
+                    <p class="text-neo-text text-lg leading-relaxed">As plataformas de nuvem oferecem escalabilidade, confiabilidade e custo-benefício incomparáveis. As principais escolhas incluem <strong>Amazon Web Services (AWS)</strong>, <strong>Microsoft Azure</strong> e <strong>Google Cloud Platform (GCP)</strong>, que fornecem infraestrutura robusta, conjuntos de ferramentas extensos e alcance global.</p>
+                </div>
+                 <div class="bg-neo-card-background p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-neo-primary">
+                    <h3 class="tech-subtitle text-2xl md:text-3xl font-semibold text-neo-accent mb-4">Hardware e Sensores</h3>
+                    <p class="text-neo-text text-lg leading-relaxed">Os nossos espelhos incorporam hardware de ponta, incluindo ecrãs táteis de alta resolução, câmaras HD para análise de pele e reconhecimento facial, e uma variedade de sensores (proximidade, temperatura, iluminação ambiente). A conectividade Wi-Fi e Bluetooth permite a integração com assistentes virtuais e outros dispositivos inteligentes, garantindo uma experiência de utilizador fluida e conectada.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-neo-secondary text-neo-text text-center py-8 mt-12 border-t border-neo-border">
+        <p>&copy; <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+        <!-- VLibras Widget -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
     </footer>
-    <script src="script.js"></script>
-</body>
-</html>
 
-<body>
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
+    <script src="script.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        // VLibras initialization
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        if (menuToggle && mobileNav) {
+            menuToggle.addEventListener('click', () => {
+                mobileNav.classList.toggle('hidden');
+                const icon = menuToggle.querySelector('svg');
+                if (mobileNav.classList.contains('hidden')) {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>';
+                } else {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+                }
+            });
+        }
+        
+        // Highlight active nav link
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('header nav a');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+
+        navLinks.forEach(link => {
+            const linkHref = (link.getAttribute('href').split('/').pop() || 'index.html');
+            if (linkHref === currentPath) {
+                link.classList.add('active-link');
+            } else {
+                link.classList.remove('active-link');
+            }
+        });
+        mobileNavLinks.forEach(link => {
+            const linkHref = (link.getAttribute('href').split('/').pop() || 'index.html');
+            if (linkHref === currentPath) {
+                link.classList.add('active-link-mobile');
+            } else {
+                link.classList.remove('active-link-mobile');
+            }
+        });
+        
+        // Specific styling for the active link (Tecnologia page)
+        if (currentPath === 'tecnologia.html') {
+            document.querySelector('nav a[href="tecnologia.html"]').classList.add('text-neo-accent', 'font-semibold');
+            const mobileActiveLink = document.querySelector('.mobile-nav a[href="tecnologia.html"]');
+            if(mobileActiveLink) mobileActiveLink.classList.add('bg-neo-border', 'text-neo-accent', 'font-semibold');
+        }
+
+        // Current year for footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
