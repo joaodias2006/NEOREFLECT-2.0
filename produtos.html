@@ -3,101 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeoReflect - Nossos Produtos</title>
-    <link rel="stylesheet" href="style.css">
+    <title>NeoReflect - Nossos Produtos Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Tailwind Customization (mesma da index.html para consistência) */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'neo-primary': '#b17c7c',
+                        'neo-secondary': '#fbeaea',
+                        'neo-accent': '#8d5b5b',
+                        'neo-text': '#5e4b4b',
+                        'neo-light-text': '#ffffff',
+                        'neo-background': '#fdf7f5',
+                        'neo-card-background': '#ffffff',
+                        'neo-border': '#f0dada',
+                        'neo-hover-accent': '#9c6c6c',
+                    }
+                }
+            }
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdf7f5; /* neo-background */
+            color: #5e4b4b; /* neo-text */
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header h1, section h2, .product h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .active-link {
+            color: #8d5b5b; /* neo-accent */
+            font-weight: 600;
+        }
+        .active-link-mobile {
+            background-color: #f0dada; /* neo-border */
+            color: #8d5b5b; /* neo-accent */
+            font-weight: 600;
+        }
+        /* Adiciona uma transição suave para o scrollspy se necessário */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1><a href="home.html" style="text-decoration: none; color: inherit;">NeoReflect</a></h1>
-        <div class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+<body class="bg-neo-background font-sans text-neo-text">
+    <!-- Header -->
+    <header class="bg-neo-secondary shadow-md sticky top-0 z-50 py-5 px-6 md:px-10 flex justify-between items-center">
+        <h1 class="text-3xl text-neo-primary font-serif">
+            <a href="index.html">NeoReflect</a>
+        </h1>
+        <div class="md:hidden">
+            <button class="menu-toggle text-neo-primary focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="produtos.html" class="active">Produtos</a>
-            <a href="funcionalidades.html">Funcionalidades</a>
-            <a href="O-que-esperar.html">O que esperar</a>
-            <a href="tecnologia.html">Tecnologia</a>
-            <a href="como-comprar.html">Como Comprar</a>
-            <a href="contato.html">Contato</a>
+        <nav class="hidden md:flex space-x-6">
+            <a href="index.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Home</a>
+            <a href="sobre.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Sobre</a>
+            <a href="produtos.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Produtos</a>
+            <a href="funcionalidades.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Funcionalidades</a>
+            <a href="O-que-esperar.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">O que esperar</a>
+            <a href="tecnologia.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Tecnologia</a>
+            <a href="como-comprar.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Como Comprar</a>
+            <a href="contato.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Contato</a>
         </nav>
     </header>
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav hidden bg-neo-secondary shadow-lg py-2 md:hidden">
+        <a href="index.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Home</a>
+        <a href="sobre.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Sobre</a>
+        <a href="produtos.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Produtos</a>
+        <a href="funcionalidades.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Funcionalidades</a>
+        <a href="O-que-esperar.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">O que esperar</a>
+        <a href="tecnologia.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Tecnologia</a>
+        <a href="como-comprar.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Como Comprar</a>
+        <a href="contato.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Contato</a>
+    </nav>
 
-    <main>
-        <section id="produtos">
-            <h2>Nossos Produtos</h2>
-            <div class="products">
-                <div class="product" id="espelho-mesa">
-                    <!-- Imagem do documento: Imagem de um espelho de mesa retangular com luzes LED nas laterais, sobre uma base. -->
-                    <img src="https://placehold.co/400x350/f8e0e0/8d5b5b?text=Espelho+de+Mesa+Inteligente" alt="Espelho de Mesa Inteligente NeoReflect">
-                    <h3>Espelho de Mesa Inteligente</h3>
-                    <p>Eleve sua rotina de beleza com nosso espelho inteligente de mesa. Com iluminação LED ajustável, sensor de proximidade e análise básica da pele, ele oferece praticidade com estilo. O design compacto e sofisticado em tons rosé e bege combina com qualquer ambiente.</p>
-                    <p class="price"><strong>Preço: R$ 399 - R$ 699</strong></p>
-                    <a href="contato.html?produto=EspelhoDeMesa" class="btn product-btn">Consultar Disponibilidade</a>
+    <main class="container mx-auto px-4 py-8">
+        <section id="produtos" class="py-12 md:py-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-neo-primary text-center mb-12 font-serif">Nossos Produtos Premium</h2>
+            <div class="products space-y-16">
+                <!-- Produto 2: Espelho de Maquiagem com IA -->
+                <div class="product bg-neo-card-background p-6 md:p-8 rounded-xl shadow-xl flex flex-col md:flex-row-reverse items-center gap-8" id="espelho-maquiagem-ia">
+                     <img src="https://placehold.co/400x350/fbeaea/b17c7c?text=Espelho+de+Maquiagem+com+IA" alt="Espelho de Maquiagem com IA NeoReflect" class="w-full md:w-1/3 h-auto max-h-80 object-cover rounded-lg shadow-md" onerror="this.src='https://placehold.co/400x350/cccccc/333333?text=Imagem+Indisponível'">
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl md:text-3xl font-semibold text-neo-accent mb-3 font-serif">Espelho de Maquiagem com IA</h3>
+                        <p class="text-neo-text mb-4 text-lg">Transforme seu ritual de beleza com o espelho inteligente com IA. Equipado com câmera de alta definição, sensores de pele e um sistema avançado de recomendação de maquiagem, ele analisa sua pele e entrega sugestões precisas. Com tela sensível ao toque e acabamento premium, é o seu assistente pessoal de beleza.</p>
+                        <p class="price text-xl md:text-2xl font-bold text-neo-primary mb-6"><strong>Preço: R$ 13.499 - R$ 14.999</strong></p>
+                        <a href="contato.html?produto=EspelhoMaquiagemIA" class="btn product-btn bg-neo-accent text-neo-light-text py-3 px-8 rounded-full font-semibold hover:bg-neo-primary transition-colors text-lg inline-block">Consultar Disponibilidade</a>
+                    </div>
                 </div>
-                <div class="product" id="espelho-maquiagem-ia">
-                    <!-- Imagem do documento: Imagem de um espelho de maquiagem redondo com iluminação circular, mostrando uma interface digital e uma pequena câmera na base. Ao lado, um porta-pincéis e um batom. -->
-                    <img src="https://placehold.co/400x350/fbeaea/b17c7c?text=Espelho+de+Maquiagem+com+IA" alt="Espelho de Maquiagem com IA NeoReflect">
-                    <h3>Espelho de Maquiagem com IA</h3>
-                    <p>Transforme seu ritual de beleza com o espelho inteligente com IA. Equipado com câmera de alta definição, sensores de pele e um sistema avançado de recomendação de maquiagem, ele analisa sua pele e entrega sugestões precisas. Com tela sensível ao toque e acabamento premium, é o seu assistente pessoal de beleza.</p>
-                    <p class="price"><strong>Preço: R$ 799 - R$ 1.299</strong></p>
-                     <a href="contato.html?produto=EspelhoMaquiagemIA" class="btn product-btn">Consultar Disponibilidade</a>
-                </div>
-                <div class="product" id="espelho-corpo-inteiro">
-                     <!-- Imagem do documento (não fornecida, usando placeholder genérico) -->
-                    <img src="https://placehold.co/400x350/fdf7f5/5e4b4b?text=Espelho+de+Corpo+Inteiro+IA" alt="Espelho de Corpo Inteiro Inteligente NeoReflect">
-                    <h3>Espelho de Corpo Inteiro Inteligente</h3>
-                    <p>Apresentamos o espelho inteligente de corpo inteiro: uma experiência de moda e tecnologia unidas. Com tela sensível ao toque e IA embarcada, ele analisa sua postura, combinações de roupas e entrega recomendações de estilo personalizadas. Ideal para closets, boutiques ou quem deseja um toque de inovação no dia a dia.</p>
-                    <p class="price"><strong>Preço: R$ 1.490 - R$ 2.490</strong></p>
-                    <a href="contato.html?produto=EspelhoCorpoInteiro" class="btn product-btn">Consultar Disponibilidade</a>
+
+                <!-- Produto 3: Espelho de Corpo Inteiro Inteligente -->
+                <div class="product bg-neo-card-background p-6 md:p-8 rounded-xl shadow-xl flex flex-col md:flex-row items-center gap-8" id="espelho-corpo-inteiro">
+                    <img src="https://placehold.co/400x350/fdf7f5/5e4b4b?text=Espelho+de+Corpo+Inteiro+IA" alt="Espelho de Corpo Inteiro Inteligente NeoReflect" class="w-full md:w-1/3 h-auto max-h-80 object-cover rounded-lg shadow-md" onerror="this.src='https://placehold.co/400x350/cccccc/333333?text=Imagem+Indisponível'">
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl md:text-3xl font-semibold text-neo-accent mb-3 font-serif">Espelho de Corpo Inteiro Inteligente</h3>
+                        <p class="text-neo-text mb-4 text-lg">Apresentamos o espelho inteligente de corpo inteiro: uma experiência de moda e tecnologia unidas. Com tela sensível ao toque e IA embarcada, ele analisa sua postura, combinações de roupas e entrega recomendações de estilo personalizadas. Ideal para closets, boutiques ou quem deseja um toque de inovação no dia a dia.</p>
+                        <p class="price text-xl md:text-2xl font-bold text-neo-primary mb-6"><strong>Preço: R$ 25.499 - R$ 27.999</strong></p>
+                        <a href="contato.html?produto=EspelhoCorpoInteiro" class="btn product-btn bg-neo-accent text-neo-light-text py-3 px-8 rounded-full font-semibold hover:bg-neo-primary transition-colors text-lg inline-block">Consultar Disponibilidade</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <style>
-        .product .price {
-            font-size: 1.2em;
-            color: var(--primary-color);
-            margin-top: auto; /* Empurra o preço e botão para baixo */
-            padding-top: 15px; /* Espaço antes do preço */
-        }
-        .product-btn {
-            background-color: var(--accent-color);
-            font-size: 0.9em;
-            padding: 10px 20px;
-            margin-top: 15px; /* Espaço entre preço e botão */
-            width: calc(100% - 40px); /* Faz o botão ocupar a largura do card menos o padding */
-            box-sizing: border-box;
-        }
-        .product-btn:hover {
-            background-color: var(--primary-color);
-        }
-    </style>
-
-    <footer>
-        <p>© <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+    
+    <!-- Footer -->
+    <footer class="bg-neo-secondary text-neo-text text-center py-8 mt-12 border-t border-neo-border">
+        <p>&copy; <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+        <!-- VLibras Widget -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
     </footer>
+
     <script src="script.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
+        // VLibras initialization
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        if (menuToggle && mobileNav) {
+            menuToggle.addEventListener('click', () => {
+                mobileNav.classList.toggle('hidden');
+                const icon = menuToggle.querySelector('svg');
+                if (mobileNav.classList.contains('hidden')) {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>';
+                } else {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+                }
+            });
+        }
+        
+        // Highlight active nav link
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('header nav a');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+
+        navLinks.forEach(link => {
+            const linkHref = (link.getAttribute('href').split('/').pop() || 'index.html');
+            if (linkHref === currentPath) {
+                link.classList.add('active-link');
+            } else {
+                link.classList.remove('active-link');
+            }
+        });
+        mobileNavLinks.forEach(link => {
+            const linkHref = (link.getAttribute('href').split('/').pop() || 'index.html');
+            if (linkHref === currentPath) {
+                link.classList.add('active-link-mobile');
+            } else {
+                link.classList.remove('active-link-mobile');
+            }
+        });
+        
+        // Specific styling for the active link (Produtos page)
+        if (currentPath === 'produtos.html') {
+            document.querySelector('nav a[href="produtos.html"]').classList.add('text-neo-accent', 'font-semibold');
+             const mobileActiveLink = document.querySelector('.mobile-nav a[href="produtos.html"]');
+            if(mobileActiveLink) mobileActiveLink.classList.add('bg-neo-border', 'text-neo-accent', 'font-semibold');
+        }
+
+        // Current year for footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
-</body>
-</html>
-
-<body>
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
 </body>
 </html>
