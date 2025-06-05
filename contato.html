@@ -3,223 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeoReflect - Contato</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Poderia adicionar ícones para os canais de contato, ex: Font Awesome -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+    <title>NeoReflect - Entre em Contato</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        /* Tailwind Customization (mesma da index.html para consistência) */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'neo-primary': '#b17c7c',
+                        'neo-secondary': '#fbeaea',
+                        'neo-accent': '#8d5b5b',
+                        'neo-text': '#5e4b4b',
+                        'neo-light-text': '#ffffff',
+                        'neo-background': '#fdf7f5',
+                        'neo-card-background': '#ffffff',
+                        'neo-border': '#f0dada',
+                        'neo-hover-accent': '#9c6c6c',
+                    }
+                }
+            }
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdf7f5; /* neo-background */
+            color: #5e4b4b; /* neo-text */
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header h1, section h2, .channel-card h3, .contact-form-placeholder h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .active-link {
+            color: #8d5b5b; /* neo-accent */
+            font-weight: 600;
+        }
+        .active-link-mobile {
+            background-color: #f0dada; /* neo-border */
+            color: #8d5b5b; /* neo-accent */
+            font-weight: 600;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1><a href="home.html" style="text-decoration: none; color: inherit;">NeoReflect</a></h1>
-        <div class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+<body class="bg-neo-background font-sans text-neo-text">
+    <!-- Header -->
+    <header class="bg-neo-secondary shadow-md sticky top-0 z-50 py-5 px-6 md:px-10 flex justify-between items-center">
+        <h1 class="text-3xl text-neo-primary font-serif">
+            <a href="index.html">NeoReflect</a> <!-- Link para home -->
+        </h1>
+        <div class="md:hidden">
+            <button class="menu-toggle text-neo-primary focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="funcionalidades.html">Funcionalidades</a>
-            <a href="O-que-esperar.html">O que esperar</a>
-            <a href="tecnologia.html">Tecnologia</a>
-            <a href="como-comprar.html">Como Comprar</a>
-            <a href="contato.html" class="active">Contato</a>
+        <nav class="hidden md:flex space-x-6">
+            <a href="index.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Home</a>
+            <a href="sobre.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Sobre</a>
+            <a href="produtos.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Produtos</a>
+            <a href="funcionalidades.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Funcionalidades</a>
+            <a href="O-que-esperar.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">O que esperar</a>
+            <a href="tecnologia.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Tecnologia</a>
+            <a href="como-comprar.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Como Comprar</a>
+            <a href="contato.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Contato</a>
         </nav>
     </header>
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav hidden bg-neo-secondary shadow-lg py-2 md:hidden">
+        <a href="index.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Home</a>
+        <a href="sobre.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Sobre</a>
+        <a href="produtos.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Produtos</a>
+        <a href="funcionalidades.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Funcionalidades</a>
+        <a href="O-que-esperar.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">O que esperar</a>
+        <a href="tecnologia.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Tecnologia</a>
+        <a href="como-comprar.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Como Comprar</a>
+        <a href="contato.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Contato</a>
+    </nav>
 
-    <main>
-        <section id="contato">
-            <h2>Entre em Contato Connosco</h2>
-            <p class="intro-contato">Adoraríamos ouvir de si! Seja para tirar dúvidas, dar sugestões, registar interesse nos nossos produtos ou para parcerias, a equipa NeoReflect está à sua disposição.</p>
+    <main class="container mx-auto px-4 py-8">
+        <section id="contato" class="py-12 md:py-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-neo-primary text-center mb-8 font-serif">Entre em Contato Connosco</h2>
+            <p class="intro-contato text-lg text-neo-text text-center max-w-3xl mx-auto mb-12">
+                Adoraríamos ouvir de si! Seja para tirar dúvidas, dar sugestões, registar interesse nos nossos produtos ou para parcerias, a equipa NeoReflect está à sua disposição.
+            </p>
             
-            <div class="contact-channels">
-                <div class="channel-card">
-                    <!-- <i class="fas fa-envelope"></i> Exemplo de ícone -->
-                    <h3>Email</h3>
-                    <p>Para questões gerais, suporte ou informações comerciais:</p>
-                    <a href="mailto:espelhos@inteligentes.com.br">espelhos@inteligentes.com.br</a>
+            <div class="contact-channels grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Canal Email -->
+                <div class="channel-card bg-neo-card-background p-6 rounded-xl shadow-lg text-center border-t-4 border-neo-primary transform hover:scale-105 transition-transform duration-300">
+                    <i class="fas fa-envelope fa-3x text-neo-primary mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-neo-accent mb-2">Email</h3>
+                    <p class="text-neo-text mb-3">Para questões gerais, suporte ou informações comerciais:</p>
+                    <a href="mailto:espelhos@inteligentes.com.br" class="text-neo-primary font-semibold hover:text-neo-accent break-all">espelhos@inteligentes.com.br</a>
                 </div>
 
-                <div class="channel-card">
-                    <!-- <i class="fab fa-whatsapp"></i> Exemplo de ícone -->
-                    <h3>WhatsApp</h3>
-                    <p>Para um contacto mais direto e rápido:</p>
-                    <a href="https://wa.me/55199995722896" target="_blank">(19) 9 99572-2896</a>
+                <!-- Canal WhatsApp -->
+                <div class="channel-card bg-neo-card-background p-6 rounded-xl shadow-lg text-center border-t-4 border-neo-primary transform hover:scale-105 transition-transform duration-300">
+                    <i class="fab fa-whatsapp fa-3x text-neo-primary mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-neo-accent mb-2">WhatsApp</h3>
+                    <p class="text-neo-text mb-3">Para um contacto mais direto e rápido:</p>
+                    <a href="https://wa.me/55199995722896" target="_blank" class="text-neo-primary font-semibold hover:text-neo-accent">(19) 9 99572-2896</a>
                 </div>
 
-                <div class="channel-card">
-                    <!-- <i class="fas fa-phone"></i> Exemplo de ícone -->
-                    <h3>Telefone</h3>
-                    <p>Para atendimento por voz:</p>
-                    <p class="phone-number">(19) 9 3652-9864</p>
+                <!-- Canal Telefone -->
+                <div class="channel-card bg-neo-card-background p-6 rounded-xl shadow-lg text-center border-t-4 border-neo-primary transform hover:scale-105 transition-transform duration-300">
+                    <i class="fas fa-phone-alt fa-3x text-neo-primary mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-neo-accent mb-2">Telefone</h3>
+                    <p class="text-neo-text mb-3">Para atendimento por voz:</p>
+                    <p class="phone-number text-neo-primary font-semibold">(19) 9 3652-9864</p>
                 </div>
             </div>
 
-            <div class="contact-form-placeholder">
-                <h3>Ou Deixe-nos uma Mensagem</h3>
-                <p>Em breve, disponibilizaremos um formulário de contacto diretamente aqui na página para sua conveniência.</p>
-                <!-- Aqui poderia entrar um formulário de contacto no futuro -->
-                 <form id="contactForm" style="display: none;"> <!-- Escondido por agora -->
+            <div class="contact-form-placeholder bg-neo-secondary p-8 md:p-12 rounded-2xl text-center shadow-lg">
+                <h3 class="text-2xl md:text-3xl font-semibold text-neo-accent mb-4">Ou Deixe-nos uma Mensagem</h3>
+                <p class="text-neo-text mb-6">Preencha o formulário abaixo e entraremos em contacto assim que possível.</p>
+                
+                <form id="contactForm" class="max-w-xl mx-auto space-y-6">
                     <div>
-                        <label for="name">Nome:</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="name" class="block text-left text-neo-text font-medium mb-1">Nome:</label>
+                        <input type="text" id="name" name="name" required class="w-full p-3 border border-neo-border rounded-lg focus:ring-2 focus:ring-neo-primary focus:border-transparent outline-none transition-shadow">
                     </div>
                     <div>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email_contact" name="email_contact" required>
+                        <label for="email_contact" class="block text-left text-neo-text font-medium mb-1">Email:</label>
+                        <input type="email" id="email_contact" name="email_contact" required class="w-full p-3 border border-neo-border rounded-lg focus:ring-2 focus:ring-neo-primary focus:border-transparent outline-none transition-shadow">
                     </div>
                     <div>
-                        <label for="subject">Assunto:</label>
-                        <input type="text" id="subject" name="subject">
+                        <label for="subject" class="block text-left text-neo-text font-medium mb-1">Assunto:</label>
+                        <input type="text" id="subject" name="subject" class="w-full p-3 border border-neo-border rounded-lg focus:ring-2 focus:ring-neo-primary focus:border-transparent outline-none transition-shadow">
                     </div>
                     <div>
-                        <label for="message">Mensagem:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message" class="block text-left text-neo-text font-medium mb-1">Mensagem:</label>
+                        <textarea id="message" name="message" rows="5" required class="w-full p-3 border border-neo-border rounded-lg focus:ring-2 focus:ring-neo-primary focus:border-transparent outline-none transition-shadow resize-none"></textarea>
                     </div>
-                    <button type="submit" class="btn">Enviar Mensagem</button>
+                    <button type="submit" class="btn bg-neo-primary text-neo-light-text py-3 px-8 rounded-full font-semibold hover:bg-neo-hover-accent transition-transform transform hover:scale-105 shadow-md">Enviar Mensagem</button>
                 </form>
+                <div id="formFeedback" class="mt-4 text-lg"></div>
             </div>
         </section>
     </main>
-
-    <style>
-        .intro-contato {
-            text-align: center;
-            font-size: 1.1em;
-            margin-bottom: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .contact-channels {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        .channel-card {
-            background-color: var(--card-background);
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px var(--shadow-color);
-            text-align: center;
-            border-top: 5px solid var(--primary-color);
-        }
-        .channel-card i { /* Estilo para ícones, se usados */
-            font-size: 2.5em;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        .channel-card h3 {
-            font-family: var(--font-secondary);
-            color: var(--accent-color);
-            font-size: 1.6em;
-            margin-bottom: 10px;
-        }
-        .channel-card p {
-            font-size: 1em;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .channel-card a, .phone-number {
-            font-size: 1.1em;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .channel-card a:hover {
-            text-decoration: underline;
-        }
-        .contact-form-placeholder {
-            background-color: var(--secondary-color);
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-        }
-        .contact-form-placeholder h3 {
-            color: var(--accent-color);
-            font-family: var(--font-secondary);
-            margin-bottom: 15px;
-        }
-        /* Estilos básicos para o formulário (se for ativado) */
-        #contactForm div {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-        #contactForm label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: var(--text-color);
-        }
-        #contactForm input[type="text"],
-        #contactForm input[type="email"],
-        #contactForm textarea {
-            width: calc(100% - 22px); /* Considera padding e borda */
-            padding: 10px;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-family: var(--font-primary);
-            font-size: 1em;
-        }
-        #contactForm textarea {
-            resize: vertical;
-        }
-        #contactForm button.btn {
-            display: block;
-            margin: 20px auto 0 auto;
-        }
-    </style>
-
-    <footer>
-        <p>© <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+    
+    <!-- Footer -->
+    <footer class="bg-neo-secondary text-neo-text text-center py-8 mt-12 border-t border-neo-border">
+        <p>&copy; <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+        <!-- VLibras Widget -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
     </footer>
+
     <script src="script.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        // VLibras initialization
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
 
-        // Simples script para preencher o assunto do formulário se vier da URL
-        // (o formulário está escondido por agora, mas o script pode ficar)
-        const urlParams = new URLSearchParams(window.location.search);
-        const subjectFromUrl = urlParams.get('assunto');
-        const produtoFromUrl = urlParams.get('produto');
-        const subjectField = document.getElementById('subject');
-
-        if (subjectField) {
-            if (subjectFromUrl) {
-                subjectField.value = subjectFromUrl.replace(/([A-Z])/g, ' $1').trim(); // Ex: "InteresseNeoReflect" -> "Interesse Neo Reflect"
-            }
-            if (produtoFromUrl) {
-                 subjectField.value = `Interesse no produto: ${produtoFromUrl.replace(/([A-Z])/g, ' $1').trim()}`;
-            }
-        }
-         // Se o formulário for ativado, este código pode ser usado para o envio
-        /*
-        const contactForm = document.getElementById('contactForm');
-        if(contactForm){
-            contactForm.addEventListener('submit', function(e){
-                e.preventDefault();
-                // Aqui iria a lógica de envio do formulário (ex: AJAX para um backend)
-                alert('Mensagem enviada (simulação)! Em um site real, isso seria processado no servidor.');
-                contactForm.reset();
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        if (menuToggle && mobileNav) {
+            menuToggle.addEventListener('click', () => {
+                mobileNav.classList.toggle('hidden');
+                const icon = menuToggle.querySelector('svg');
+                if (mobileNav.classList.contains('hidden')) {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>';
+                } else {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+                }
             });
         }
-        */
-    </script>
-</body>
-</html>
+        
+        // Highlight active nav link
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('header nav a');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
 
-<body>
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
+        navLinks.forEach(link => {
+            const linkHref = (link.getAttribute('href').split('/').pop() || 'index.html');
+            if (linkHref === currentPath) {
+                link.classList.add('active-link');
+            } else {
+                link.classList.remove('active-link');
+            }
+        });
+        mobileNavLinks.forEach(link => {
+            const linkHref = (link.getAttribute('href').split('/').pop() || 'index.html');
+            if (linkHref === currentPath) {
+                link.classList.add('active-link-mobile');
+            } else {
+                link.classList.remove('active-link-mobile');
+            }
+        });
+        
+        // Specific styling for the active link (Contato page)
+        if (currentPath === 'contato.html') {
+            document.querySelector('nav a[href="contato.html"]').classList.add('text-neo-accent', 'font-semibold');
+             const mobileActiveLink = document.querySelector('.mobile-nav a[href="contato.html"]');
+            if(mobileActiveLink) mobileActiveLink.classList.add('bg-neo-border', 'text-neo-accent', 'font-semibold');
+        }
+
+        // Current year for footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Contact Form Logic
+        const contactForm = document.getElementById('contactForm');
+        const formFeedback = document.getElementById('formFeedback');
+
+        if (contactForm) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const subjectFromUrl = urlParams.get('assunto');
+            const produtoFromUrl = urlParams.get('produto');
+            const subjectField = contactForm.querySelector('#subject');
+
+            if (subjectField) {
+                if (subjectFromUrl) {
+                    subjectField.value = subjectFromUrl.replace(/([A-Z])/g, ' $1').trim();
+                }
+                if (produtoFromUrl) {
+                    subjectField.value = `Interesse no produto: ${produtoFromUrl.replace(/([A-Z0-9])/g, ' $1').trim()}`;
+                }
+            }
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Basic validation example
+                const name = contactForm.querySelector('#name').value;
+                const email = contactForm.querySelector('#email_contact').value;
+                const message = contactForm.querySelector('#message').value;
+
+                if (!name || !email || !message) {
+                    formFeedback.textContent = 'Por favor, preencha todos os campos obrigatórios.';
+                    formFeedback.className = 'mt-4 text-lg text-red-600';
+                    return;
+                }
+
+
+                // Simulate form submission
+                console.log("Nome:", name);
+                console.log("Email:", email);
+                console.log("Assunto:", subjectField ? subjectField.value : '');
+                console.log("Mensagem:", message);
+                
+                formFeedback.textContent = 'Mensagem enviada com sucesso (simulação)!';
+                formFeedback.className = 'mt-4 text-lg text-green-600';
+                contactForm.reset();
+                if(subjectField) subjectField.value = ''; // Clear subject field after reset too
+
+                setTimeout(() => {
+                    formFeedback.textContent = '';
+                }, 5000);
+            });
+        }
+    </script>
 </body>
 </html>
