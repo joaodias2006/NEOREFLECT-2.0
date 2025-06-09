@@ -1,108 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeoReflect - O Espelho Inteligente que Sabe o que Você Precisa!</title>
-    <!-- <link rel="stylesheet" href="style.css"> Removido pois o Tailwind está no head -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        /* Tailwind Customization - Padronizado */
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    colors: {
-                        'neo-primary': '#b17c7c',
-                        'neo-secondary': '#fbeaea',
-                        'neo-accent': '#8d5b5b',
-                        'neo-text': '#5e4b4b',
-                        'neo-light-text': '#ffffff',
-                        'neo-background': '#fdf7f5',
-                        'neo-card-background': '#ffffff',
-                        'neo-border': '#f0dada',
-                        'neo-hover-accent': '#9c6c6c',
-                    }
-                }
-            }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NeoReflect - Sobre Nós</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            'neo-primary': '#b17c7c',
+            'neo-secondary': '#fbeaea',
+            'neo-accent': '#8d5b5b',
+            'neo-text': '#5e4b4b',
+            'neo-light-text': '#ffffff',
+            'neo-background': '#fdf7f5',
+            'neo-card-background': '#ffffff',
+            'neo-border': '#f0dada',
+            'neo-hover-accent': '#9c6c6c',
+          }
         }
-        /* Estilos base e específicos para fontes serifadas */
-        body {
-            font-family: 'Montserrat', sans-serif; /* Fonte padrão do corpo */
-            background-color: #fdf7f5; /* Cor de fundo neo-background */
-            color: #5e4b4b; /* Cor de texto neo-text */
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        /* Aplicando a fonte serifada aos títulos principais */
-        header h1, section h2, .feature-item h3, .product h3, #call-to-action-home h2 {
-            font-family: 'Playfair Display', serif;
-        }
-        .hero h2 { /* Específico para o h2 da seção hero que já tem a classe */
-             font-family: 'Playfair Display', serif;
-        }
-        .active-link { /* Estilo para link ativo na navegação desktop */
-            color: #8d5b5b; /* neo-accent */
-            font-weight: 600; /* semibold */
-        }
-        .active-link-mobile { /* Estilo para link ativo na navegação mobile */
-            background-color: #f0dada; /* neo-border */
-            color: #8d5b5b; /* neo-accent */
-            font-weight: 600; /* semibold */
-        }
-    </style>
-</head>
-<body class="bg-neo-background font-sans text-neo-text">
-    <!-- Header -->
-    <header class="bg-neo-secondary shadow-md sticky top-0 z-50 py-5 px-6 md:px-10 flex justify-between items-center">
-        <h1 class="text-3xl text-neo-primary">
-            <a href="index.html">NeoReflect</a>
-        </h1>
-        <div class="md:hidden">
-            <button class="menu-toggle text-neo-primary focus:outline-none">
-                <svg class="w-6 h-6 icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                <svg class="w-6 h-6 icon-close hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
-        <nav class="hidden md:flex space-x-6">
-            <a href="index.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Home</a>
-            <a href="sobre.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Sobre</a>
-            <a href="produtos.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Produtos</a>
-            <a href="funcionalidades.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Funcionalidades</a>
-            <a href="O-que-esperar.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">O que esperar</a>
-            <a href="tecnologia.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Tecnologia</a>
-            <a href="como-comprar.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Como Comprar</a>
-            <a href="contato.html" class="text-neo-text hover:text-neo-accent transition-colors duration-300 nav-link">Contato</a>
-        </nav>
-    </header>
-     <!-- Mobile Navigation Menu -->
-    <nav class="mobile-nav hidden bg-neo-secondary shadow-lg py-2 md:hidden">
-        <a href="index.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Home</a>
-        <a href="sobre.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Sobre</a>
-        <a href="produtos.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Produtos</a>
-        <a href="funcionalidades.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">Funcionalidades</a>
-        <a href="O-que-esperar.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">O que esperar</a>
-        <a href="tecnologia.html" class="block px-4 py-2 text-neo-text hover:bg-neo-border hover:text-neo-accent transition-colors duration-300 nav-link-mobile">T
+      }
+    };
 
-<html>
-<head>
-<title>Teste do VLibras</title>
-</head>
+    html {
+      scroll-behavior: smooth;
+    }
 
-<body>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-neo-background text-neo-text font-sans">
+
+  <!-- Header -->
+  <header class="bg-neo-secondary shadow-md sticky top-0 z-50 py-5 px-6 md:px-10 flex justify-between items-center">
+    <h1 class="text-3xl text-neo-primary font-serif">
+      <a href="index.html">NeoReflect</a>
+    </h1>
+    <div class="md:hidden">
+      <button class="menu-toggle text-neo-primary focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:text-neo-accent transition">Home</a>
+      <a href="sobre.html" class="text-neo-accent font-semibold">Sobre</a>
+      <a href="produtos.html" class="hover:text-neo-accent transition">Produtos</a>
+      <a href="funcionalidades.html" class="hover:text-neo-accent transition">Funcionalidades</a>
+      <a href="O-que-esperar.html" class="hover:text-neo-accent transition">O que esperar</a>
+      <a href="tecnologia.html" class="hover:text-neo-accent transition">Tecnologia</a>
+      <a href="como-comprar.html" class="hover:text-neo-accent transition">Como Comprar</a>
+      <a href="contato.html" class="hover:text-neo-accent transition">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo -->
+  <main class="container mx-auto px-4 py-12 max-w-4xl">
+    <section id="sobre" class="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-neo-primary mb-8">Sobre a NeoReflect</h2>
+      <p class="text-xl text-center font-serif text-neo-accent mb-8 animate-bounce"><strong>“O Espelho Inteligente que Sabe o que Você Precisa!”</strong></p>
+
+      <p class="mb-6">A NeoReflect é uma empresa inovadora dedicada a transformar sua rotina de beleza e bem-estar...</p>
+      <p class="mb-6">O grande diferencial dos espelhos inteligentes da NeoReflect está em sua capacidade de aprendizado...</p>
+      <p class="mb-6">O NeoReflect não é apenas um espelho; é uma experiência única de beleza e estilo...</p>
+      <p class="mb-6">Nossa missão é democratizar o acesso à tecnologia de ponta...</p>
+    </section>
+
+    <section id="call-to-action-sobre" class="mt-12 bg-neo-secondary p-8 rounded-xl text-center fade-up">
+      <h2 class="text-2xl md:text-3xl font-bold text-neo-primary mb-4 font-serif">Seja a melhor versão de você!</h2>
+      <p class="mb-6">Com NeoReflect, descubra a sua verdadeira beleza todos os dias e compartilhe o que há de melhor em você com o mundo.</p>
+      <div class="flex flex-wrap justify-center gap-3 mt-4">
+        <span class="bg-neo-primary hover:bg-neo-hover-accent transition text-white px-4 py-2 rounded-full text-sm cursor-pointer">#NeoReflectBeauty</span>
+        <span class="bg-neo-primary hover:bg-neo-hover-accent transition text-white px-4 py-2 rounded-full text-sm cursor-pointer">#BelezaInteligente</span>
+        <span class="bg-neo-primary hover:bg-neo-hover-accent transition text-white px-4 py-2 rounded-full text-sm cursor-pointer">#TransformeSeuLook</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Botão de Voltar ao Topo -->
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-6 right-6 bg-neo-accent hover:bg-neo-hover-accent text-white px-4 py-2 rounded-full shadow-lg">
+    ↑ Topo
+  </button>
+
+  <!-- Footer -->
+  <footer class="bg-neo-secondary text-neo-text text-center py-6 mt-12 border-t border-neo-border">
+    <p>&copy; <span id="currentYear"></span> NeoReflect. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- VLibras -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
+
+  <!-- Scripts -->
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Menu mobile toggle (caso você queira expandir depois)
+    document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+      alert("Menu mobile pode ser implementado aqui.");
+    });
+
+    // Animação fade ao rolar
+    const faders = document.querySelectorAll('.fade-up');
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
   </script>
 </body>
 </html>
